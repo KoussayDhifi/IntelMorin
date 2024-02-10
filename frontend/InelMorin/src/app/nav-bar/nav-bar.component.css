@@ -1,0 +1,29 @@
+.list-group{
+    box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.1);
+    max-height: max-content;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    width: 250px;
+    position: absolute;
+      
+}
+.list-group-item {
+    border-bottom: 1px solid gray;
+}
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+   
+}
+.adminPhoto {
+    padding: 15px;
+    border-radius: 25px;
+}
+.success {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: large;
+}

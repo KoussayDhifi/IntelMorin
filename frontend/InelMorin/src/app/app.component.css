@@ -1,0 +1,10 @@
+.children {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.dynamicElements {
+    align-self: center;
+    border:solid 1px black;
+    
+}
