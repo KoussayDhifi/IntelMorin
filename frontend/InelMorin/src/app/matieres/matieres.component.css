@@ -1,0 +1,8 @@
+.matieres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: 90vh;
+    padding-left: 25px;
+}

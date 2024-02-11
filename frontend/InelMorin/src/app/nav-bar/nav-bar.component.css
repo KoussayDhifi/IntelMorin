@@ -7,16 +7,16 @@
     position: absolute;
       
 }
-.list-group-item {
-    border-bottom: 1px solid gray;
-}
+
 a {
     text-decoration: none;
+    color:black;
 }
 
 a:hover {
     cursor: pointer;
-   
+    text-decoration: none;
+    color:black
 }
 .adminPhoto {
     padding: 15px;
