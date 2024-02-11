@@ -7,6 +7,7 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { BarComponent } from './bar/bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatieresComponent } from './matieres/matieres.component';
+import { ElevesComponent } from './eleves/eleves.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MatieresComponent } from './matieres/matieres.component';
     AcceuilComponent,
     BarComponent,
     NavBarComponent,
-    MatieresComponent
+    MatieresComponent,
+    ElevesComponent
   ],
   imports: [
     BrowserModule,
