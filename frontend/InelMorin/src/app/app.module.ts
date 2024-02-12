@@ -8,6 +8,7 @@ import { BarComponent } from './bar/bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatieresComponent } from './matieres/matieres.component';
 import { ElevesComponent } from './eleves/eleves.component';
+import { EnseignantsComponent } from './enseignants/enseignants.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ElevesComponent } from './eleves/eleves.component';
     BarComponent,
     NavBarComponent,
     MatieresComponent,
-    ElevesComponent
+    ElevesComponent,
+    EnseignantsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+#InterfaceEnseignant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+#EnseignantIcon {
+    height: 2 px;
+    width: 2 px;
+}
+input{
+    border-radius: 20px;
+}
