@@ -1,0 +1,32 @@
+<div class="content">
+    <div id="InterfaceEnseignant">
+        <img src="../../assets/Enseignant.png" alt="EnseignantIcon" id="EnseignantIcon">
+        <h1 style="font-family: Poppins;">Enseignants</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5 offset-4">                
+                <div class="form-floating">
+                        <label for="nom" class="form-label">Nom Prof : </label>
+                        <input type="text" class="form-control" name="nom" placeholder="Entrez le nom du prof">                
+                        <label for="prenom" class="form-label" >Prenom Prof :</label>
+                        <input type="text" class="form-control" name="prenom" placeholder="Entrez le prenom du prof">
+                        <label for="DateDeNaissance" class="form-label">Date de naissance Prof : </label>
+                        <input type="date" class="form-control" name="DateDeNaissance" placeholder="JJ - MM - AAAA ">
+                        <label for="Telephone">Téléphone : </label>
+                        <input type="tel" class="form-control" pattern="[0-9]{2}[0-9]{3}[0-9]{3}" name="Telephone" placeholder="Entrez le numéro de téléphone">
+                        <label for="Email">Email : </label>
+                        <input type="email" class="form-control" name="Email" placeholder="example@email.com" required="true">
+                        <label for="Password">Mot de passe : </label>
+                        <input type="password" class="form-control" name="Password" placeholder="Entrez un mot de passe">
+                        <label for="Nom Lycée">Nom lycée : </label>
+                        <input type="text" class="form-control" name="Nom Lycée" placeholder="Entrez le nom de lycée">
+                        <label for="Matiere">Matière : </label>
+                        <input type="text" class="form-control" name="Matiere" placeholder="Entrez le nom de la matiere">
+                        <input type="Submit" class="btn btn-primary offset-5 mt-4 " name="ButtonAjouter" value="Ajouter">
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
