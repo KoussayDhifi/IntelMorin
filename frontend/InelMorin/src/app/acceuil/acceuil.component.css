@@ -55,3 +55,48 @@ li:last-child .time {
     align-items: center;
 }
 
+.main {
+    display: flex;
+}
+
+.imgfarhat {
+    width: 700px;
+    height: 500px;
+}
+
+.dots {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.dots > * {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  
+
+}
+.imgfarhat {
+    animation-name: opaImage;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+  }
+  
+  @keyframes opaImage {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
