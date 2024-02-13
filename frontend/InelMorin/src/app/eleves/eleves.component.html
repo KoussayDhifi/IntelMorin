@@ -12,29 +12,29 @@
                         <div class="row">    
                             <div class="col">
                             <label for="nom" class="form-label">Nom Eleve : </label>
-                            <input type="text" class="form-control" name="nom" placeholder="Entrez le nom d'élève">  
+                            <input type="text" class="form-control" name="nom" [(ngModel)]="nom" placeholder="Entrez le nom d'élève">  
                             </div> 
                             <div class="col">             
                             <label for="prenom" class="form-label" >Prenom Eleve :</label>
-                            <input type="text" class="form-control" name="prenom" placeholder="Entrez le prenom d'élève">
+                            <input type="text" class="form-control" name="prenom" [(ngModel)]="prenom" placeholder="Entrez le prenom d'élève">
                             </div>
                         </div>    
-                            <label for="DateDeNaissance" class="form-label">Date de naissance Eleve : </label>
-                            <input type="date" class="form-control" name="DateDeNaissance" placeholder="JJ - MM - AAAA ">
+                            <label for="DateDeNaissance" class="form-label" >Date de naissance Eleve : </label>
+                            <input type="date" class="form-control" name="DateDeNaissance" [(ngModel)]="DateNE">
                             <label for="Telephone">Téléphone : </label>
-                            <input type="tel" class="form-control" pattern="[0-9]{2}[0-9]{3}[0-9]{3}" name="Telephone" placeholder="Entrez le numéro de téléphone">
+                            <input type="tel" class="form-control" pattern="[0-9]{2}[0-9]{3}[0-9]{3}" name="Telephone" [(ngModel)]="TelephoneE"  placeholder="Entrez le numéro de téléphone">
                             <label for="Telephone">Téléphone du parent : </label>
-                            <input type="tel" class="form-control" pattern="[0-9]{2}[0-9]{3}[0-9]{3}" name="Telephone" placeholder="Entrez le numéro de téléphone">
+                            <input type="tel" class="form-control" pattern="[0-9]{2}[0-9]{3}[0-9]{3}" name="Telephone" [(ngModel)]="TelephoneP" placeholder="Entrez le numéro de téléphone">
                             <label for="Email">Email : </label>
-                            <input type="email" class="form-control" name="Email" placeholder="example@email.com" required="true">
+                            <input type="email" class="form-control" name="Email" placeholder="example@email.com" [(ngModel)]="MailE" required="true">
                             <label for="Password">Mot de passe : </label>
-                            <input type="password" class="form-control" name="Password" placeholder="Entrez un mot de passe">
+                            <input type="password" class="form-control" name="Password" [(ngModel)]="Password" placeholder="Entrez un mot de passe">
                             <label for="Nom Lycée">Nom lycée : </label>
-                            <input type="text" class="form-control" name="Nom Lycée" placeholder="Entrez le nom de lycée">
+                            <input type="text" class="form-control" name="Nom Lycée" [(ngModel)]="NomLy" placeholder="Entrez le nom de lycée">
                             <label for="Section">Section :  </label>
-                            <input type="text" class="form-control" name="Matiere" placeholder="Entrez le nom de la Section">
+                            <input type="text" class="form-control" name="Matiere" [(ngModel)]="Section" placeholder="Entrez le nom de la Section">
                             <label for="Section">Niveau :  </label>
-                            <input type="text" class="form-control" name="Niveau" placeholder="Entrez le niveau d'élève">
+                            <input type="text" class="form-control" name="Niveau" [(ngModel)]="Niveau" placeholder="Entrez le niveau d'élève">
                             <input type="Submit" class="btn btn-primary offset-11 mt-4 " name="ButtonAjouter" value="Ajouter">
                     </div>                
                 </div>
