@@ -1,0 +1,39 @@
+.salle {
+    box-shadow: 12px 14px 3px -3px rgba(0,0,0,0.1);
+    padding: 50px;
+    width: 949px;
+    border-radius: 25px;
+    background-color: #FFF;
+}
+label{
+    font-size: x-large;
+}
+#Btn{
+    width: 200px !important;
+    font-family: 'Poppins';
+}
+.InterfaceSalles{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+}
+.InterfaceSalles img{
+    height: 100px;
+    width: 100px;
+}
+.row1{
+    border-bottom: 1px solid black;
+    padding: 5px;        
+}
+.row2{
+    border-bottom: 1px solid black;
+    padding: 5px;        
+}
+
+.Btn1{
+    position: absolute ;
+    display: flex;
+    left: 70%;
+    
+}

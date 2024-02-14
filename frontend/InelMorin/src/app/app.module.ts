@@ -9,6 +9,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatieresComponent } from './matieres/matieres.component';
 import { ElevesComponent } from './eleves/eleves.component';
 import { EnseignantsComponent } from './enseignants/enseignants.component';
+import { AdminComponent } from './admin/admin.component';
+import { SallesComponent } from './salles/salles.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { EnseignantsComponent } from './enseignants/enseignants.component';
     NavBarComponent,
     MatieresComponent,
     ElevesComponent,
-    EnseignantsComponent
+    EnseignantsComponent,
+    AdminComponent,
+    SallesComponent
   ],
   imports: [
     BrowserModule,

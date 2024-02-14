@@ -1,0 +1,21 @@
+<div class="content">  
+    <div class="InterfaceAdmin">
+        <img src="../../assets/Ajouter Admin.png" alt="AdminIcon" id="AdminIcon">
+        <h1 style="font-family: Poppins;">Ajouter Admin</h1> 
+    </div>
+    <div class="container">
+        <form class="was-validated">
+        <div class="row">
+            <div class="col-5 offset-4">
+                <label for="Email">Email : </label>
+                <input type="email" class="form-control" name="Email" placeholder="example@email.com" [(ngModel)]="MailA" required="true">
+                <label for="Password">Mot de passe : </label>
+                <input type="password" class="form-control" name="Password" [(ngModel)]="Password" placeholder="Entrez un mot de passe" required="true">
+                <input type="button" class="btn btn-primary mt-3 offset-5" value="Ajouter">
+            </div>
+           
+
+        </div>
+    </form>
+    </div>
+</div>

@@ -7,6 +7,10 @@
     align-items: center;
     margin-bottom: 15px;
 }
+.InterfaceEnseignant img{
+  height: 100px ;
+  width: 150px;
+}
     
     /* Apply Bootstrap styles to the select element */
 select  {
@@ -47,3 +51,6 @@ select  {
     opacity: 1;
   }
   
+  #Btn1{
+    font-family: Popins;
+  }
