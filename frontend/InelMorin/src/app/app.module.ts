@@ -9,6 +9,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatieresComponent } from './matieres/matieres.component';
 import { ElevesComponent } from './eleves/eleves.component';
 import { EnseignantsComponent } from './enseignants/enseignants.component';
+import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.component';
+import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { EnseignantsComponent } from './enseignants/enseignants.component';
     NavBarComponent,
     MatieresComponent,
     ElevesComponent,
-    EnseignantsComponent
+    EnseignantsComponent,
+    ConsultEmploiComponent,
+    CreateEmploiComponent
   ],
   imports: [
     BrowserModule,

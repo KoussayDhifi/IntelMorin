@@ -4,13 +4,27 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { MatieresComponent } from './matieres/matieres.component';
 import { ElevesComponent } from './eleves/eleves.component';
 import { EnseignantsComponent } from './enseignants/enseignants.component';
+import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.component';
+import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 
 
 const routes: Routes = [
-  {path:'', component:AcceuilComponent},
-  {path:'matieres', component:MatieresComponent} , 
-  {path: 'eleves' , component:ElevesComponent } , 
-  {path: 'enseignants', component:EnseignantsComponent}
+  {path:'', title:'Acceuil',component:AcceuilComponent},
+  {path:'matieres', title:'Matieres',component:MatieresComponent} , 
+  {path: 'eleves', title:'Eleves',component:ElevesComponent } , 
+  {path: 'enseignants', title:'Enseignants',component:EnseignantsComponent},
+  {path:'emploi',children:[
+    {
+      path:'consulter',
+      component:ConsultEmploiComponent
+    },
+    {
+      path:'ajouter',
+      component:CreateEmploiComponent
+    }
+  ]},
+  {path:'emp',redirectTo:'/emploi/consulter',pathMatch:'full'}
+  
 ];
 
 @NgModule({

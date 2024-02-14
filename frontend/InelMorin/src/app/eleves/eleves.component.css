@@ -5,7 +5,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+}
+
+input {
+  font-family: 'Poppins';
+}
+
+.InterfaceEnseignant img{
+  height: 100px;
+  width: 120px;
 }
     
     /* Apply Bootstrap styles to the select element */
