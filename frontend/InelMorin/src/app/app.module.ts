@@ -9,8 +9,18 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatieresComponent } from './matieres/matieres.component';
 import { ElevesComponent } from './eleves/eleves.component';
 import { EnseignantsComponent } from './enseignants/enseignants.component';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { AdminComponent } from './admin/admin.component';
+import { SallesComponent } from './salles/salles.component';
+=======
 import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.component';
 import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
+>>>>>>> 6ba20822fec39fc1715eb555b58c40e79f889300
+=======
+import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.component';
+import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
+>>>>>>> 6ba20822fec39fc1715eb555b58c40e79f889300
 
 @NgModule({
   declarations: [
@@ -21,8 +31,18 @@ import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
     MatieresComponent,
     ElevesComponent,
     EnseignantsComponent,
+<<<<<<< HEAD
+<<<<<<< HEAD
+    AdminComponent,
+    SallesComponent
+=======
     ConsultEmploiComponent,
     CreateEmploiComponent
+>>>>>>> 6ba20822fec39fc1715eb555b58c40e79f889300
+=======
+    ConsultEmploiComponent,
+    CreateEmploiComponent
+>>>>>>> 6ba20822fec39fc1715eb555b58c40e79f889300
   ],
   imports: [
     BrowserModule,
