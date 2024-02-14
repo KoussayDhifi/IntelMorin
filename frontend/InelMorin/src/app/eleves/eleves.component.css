@@ -14,10 +14,13 @@ input {
 .InterfaceEnseignant img{
   height: 100px;
   width: 120px;
+<<<<<<< HEAD
 }
 .InterfaceEnseignant img{
   height: 100px ;
   width: 150px;
+=======
+>>>>>>> 6ba20822fec39fc1715eb555b58c40e79f889300
 }
     
     /* Apply Bootstrap styles to the select element */
