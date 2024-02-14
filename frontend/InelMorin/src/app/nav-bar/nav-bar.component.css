@@ -8,6 +8,10 @@
       
 }
 
+.list-group-item:hover {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color:black;
@@ -33,3 +37,16 @@ a:hover {
     flex-direction: column;
     justify-content: center;
 }
+
+.toggleElm .list-group-item {
+    text-align: left;
+}
+
+.parent-item:hover {
+    background-color: #cccccc;
+    background-position: left;
+    transition:all 1s ease;
+    background: linear-gradient(to right, white 50%, #cccccc 50%) right;
+    background-size: 200% 100%;
+}
+
