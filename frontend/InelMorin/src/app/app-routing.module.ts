@@ -6,6 +6,7 @@ import { ElevesComponent } from './eleves/eleves.component';
 import { EnseignantsComponent } from './enseignants/enseignants.component';
 import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.component';
 import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
+import { SallesComponent } from './salles/salles.component';
 
 
 const routes: Routes = [
@@ -23,9 +24,12 @@ const routes: Routes = [
       component:CreateEmploiComponent
     }
   ]},
-  {path:'emp',redirectTo:'/emploi/consulter',pathMatch:'full'}
+  {path:'emp',redirectTo:'/emploi/consulter',pathMatch:'full'} , 
+  {path : 'salles', title: "Salles" ,component:SallesComponent}
+
   
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
