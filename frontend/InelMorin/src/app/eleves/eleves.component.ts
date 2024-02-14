@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
   
 })
 export class ElevesComponent {
+    nom: string = '' ; 
+    prenom : string ='' ; 
+    DateNE : any ='' ;
+    TelephoneE : any ='' ;
+    TelephoneP : any ='' ; 
+    MailE : any ='' ;
+    Password : any ='' ; 
+    NomLy : string ='' ; 
+    Section : string ='' ; 
+    Niveau : string ='' ; 
+       
 
 }
