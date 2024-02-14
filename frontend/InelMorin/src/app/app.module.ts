@@ -11,6 +11,7 @@ import { ElevesComponent } from './eleves/eleves.component';
 import { EnseignantsComponent } from './enseignants/enseignants.component';
 import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.component';
 import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
+import { SallesComponent } from './salles/salles.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
     ElevesComponent,
     EnseignantsComponent,
     ConsultEmploiComponent,
-    CreateEmploiComponent
+    CreateEmploiComponent,
+    SallesComponent
   ],
   imports: [
     BrowserModule,
