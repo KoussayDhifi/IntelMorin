@@ -24,6 +24,7 @@ nav .info .icons {
 nav p {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    margin-top: 15%;
 }
 
 .icon {
@@ -34,3 +35,5 @@ nav p {
 .logo {
     height: 50px;
 }
+
+
