@@ -1,23 +1,22 @@
-<<<<<<< HEAD
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-create-emploi',
   templateUrl: './create-emploi.component.html',
-  styleUrl: './create-emploi.component.css'
+  styleUrls: ['./create-emploi.component.css']
 })
 export class CreateEmploiComponent {
+  public idGroupe:string = "";
+  public date:string = "";
+  public Hdebut:string = "";
+  public Hfin:string = "";
+  public salle:string = ""
+  public repeter:boolean = false;
+
+
+  ajouterEmploi () {
+
+  }
+
 
 }
-=======
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-create-emploi',
-  templateUrl: './create-emploi.component.html',
-  styleUrl: './create-emploi.component.css'
-})
-export class CreateEmploiComponent {
-
-}
->>>>>>> 6ba20822fec39fc1715eb555b58c40e79f889300

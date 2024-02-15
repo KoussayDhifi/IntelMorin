@@ -1,5 +1,61 @@
-<<<<<<< HEAD
-<p>create-emploi works!</p>
-=======
-<p>create-emploi works!</p>
->>>>>>> 6ba20822fec39fc1715eb555b58c40e79f889300
+<div class="content">
+    <div class="title">
+        <img src="../../assets/Emploi du temps.png" alt="EleveIcon" id="EleveIcon">
+        <h1 style="font-family: Poppins;">Ajouter Emploi</h1>
+    </div>
+    <div class="container">
+        <form action="#" (submit) = "ajouterEmploi()">
+            <div class="row">
+                <div class="col-6">
+                    <label for="groupe">Nom du Groupe:</label>
+                    <select name="group" id="groupe" class="form-control" [(ngModel)] = "idGroupe">
+                        <option value="" disabled selected>Selectionnez un groupe</option>
+                        <option value="G1">Groupe1</option>
+                        <option value="G2">Groupe2</option>
+                        <option value="G3">Groupe3</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label for="date">Date:</label>
+                    <input type="date" name="datedebut" class="form-control" id="date" [(ngModel)]="date">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="hd">Heure Debut:</label>
+                    <input type="time" class="form-control" id="hd" name="heuredebut" [(ngModel)]="Hdebut">
+                </div>
+
+                <div class="col">
+                    <label for="hf">Heure Fin:</label>
+                    <input type="time" class="form-control" id="hf" name="heurefin" [(ngModel)]="Hfin">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="Salle">Salle:</label>
+                    <select id="Salle" class="form-control" name="nomsalle" [(ngModel)]="salle">
+                        <option value="" disabled selected>Selectionnez une salle</option>
+                        <option value="S1">A001</option>
+                        <option value="S1">A002</option>
+                        <option value="S1">A003</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="offset-3 col">
+                    <div class="custom-control custom-switch">
+                        <input class="custom-control-input " type="checkbox" id="Rep" name="reppeter" [(ngModel)]="repeter">   
+                        <label class="custom-control-label" for="Rep">Repeter</label>    
+                    </div>
+                </div>
+                <div class="col">
+                    <button class="btn btn-success" type="submit">Ajouter</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
