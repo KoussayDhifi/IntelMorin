@@ -1,0 +1,12 @@
+<div class="schedule">
+    <div class="card mh-50">
+        <div class="card-body">
+            <p class="card-title">{{profName}} {{profLast}}</p>
+            <p class="card-text">{{matiere}}</p>
+        </div>
+        <div class="card-footer d-flex">
+            <button class="btn btn-primary mr-2" (click)="editSlot($event)">Editer</button>
+            <button class="btn btn-danger" (click)="deleteSlot($event)">Supprimer</button>
+        </div>
+    </div>
+</div>
