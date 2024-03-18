@@ -17,6 +17,8 @@ import { CreateElevesComponent } from './create-eleves/create-eleves.component';
 import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-slot.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,9 @@ import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-s
     CreateEmploiComponent,
       ConsultElevesComponent,
       CreateElevesComponent,
-      ScheduleSlotComponent
+      ScheduleSlotComponent,
+      
+      
 
 
   ],

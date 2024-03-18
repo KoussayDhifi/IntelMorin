@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ConsultEmploiComponent {
 
+  public element:object | undefined;
+
+  getEditedElement($event:object):void {
+    this.element = $event;
+    
+  }
 }
