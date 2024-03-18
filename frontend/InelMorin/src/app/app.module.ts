@@ -38,7 +38,7 @@ import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-s
       ConsultElevesComponent,
       CreateElevesComponent,
       ScheduleSlotComponent,
-      StudentPaymentComponent,
+      
       
 
 
