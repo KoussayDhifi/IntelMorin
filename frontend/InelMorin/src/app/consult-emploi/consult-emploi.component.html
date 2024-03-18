@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content h-100">
     <div class="title">
         <img src="../../assets/Emploi du temps.png" alt="Emploi icon" class="w-70 h-50">
         <h1>Consulter Emploi</h1>
@@ -12,7 +12,7 @@
         
         </div>
     </form>
-    <table class="table table-bordered table-responsive">
+    <table class="table table-bordered table-responsive h-100">
 
         <tr>
             <th>Temps/Salle</th>
@@ -23,17 +23,25 @@
         </tr>
         <tr>
             <th>8-10</th>
-            <td><app-schedule-slot profName="Monji" profLast="Rahwi" matiere="Math" groupe="G002"></app-schedule-slot></td>
-            <td><app-schedule-slot profName="Monji" profLast="Zormati" matiere="Physique" groupe="G003"></app-schedule-slot></td>
-            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004"></app-schedule-slot></td>
-            <td><app-schedule-slot profName="Mounir" profLast="Yahyaoui" matiere="Info" groupe="G006"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Rahwi" matiere="Math" groupe="G002" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Zormati" matiere="Physique" groupe="G003" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Mounir" profLast="Yahyaoui" matiere="Info" groupe="G006" (data)="getEditedElement($event)"></app-schedule-slot></td>
         </tr>
         <tr>
             <th>10-12</th> 
-            <td><app-schedule-slot profName="Monji" profLast="Rahwi" matiere="Math" groupe="G002"></app-schedule-slot></td>
-            <td><app-schedule-slot profName="Monji" profLast="Zormati" matiere="Physique" groupe="G003"></app-schedule-slot></td>
-            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004"></app-schedule-slot></td>
-            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Rahwi" matiere="Math" groupe="G002" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Zormati" matiere="Physique" groupe="G003" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
+        </tr>
+        <tr>
+            <th>10-12</th> 
+            <td><app-schedule-slot profName="Monji" profLast="Rahwi" matiere="Math" groupe="G002" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Zormati" matiere="Physique" groupe="G003" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
         </tr>
     </table>
+    
 </div>

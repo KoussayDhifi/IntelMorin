@@ -15,6 +15,8 @@ import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 import { ConsultElevesComponent } from './consult-eleves/consult-eleves.component';
 import { CreateElevesComponent } from './create-eleves/create-eleves.component';
 import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-slot.component';
+import { StudentPaymentComponent } from './student-payment/student-payment.component';
+
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-s
     CreateEmploiComponent,
       ConsultElevesComponent,
       CreateElevesComponent,
-      ScheduleSlotComponent
+      ScheduleSlotComponent,
+      StudentPaymentComponent,
+      
 
 
   ],
