@@ -1,0 +1,34 @@
+.InterfacePacks{
+  display: flex;
+}
+.InterfacePacks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.InterfacePacks img{
+  height: 100px ;
+  width: 120px;
+}
+label {
+  font-family: 'Poppins';
+  font-size: x-large;
+}
+
+.row1{
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+.Btn1{
+  position: absolute ;
+  display: flex;
+  left: 70%;
+
+}
+.toggleElm .list-group-item {
+  text-align: left;
+}
+p{
+  font-family: 'Poppins';
+  font-size: medium;
+}
