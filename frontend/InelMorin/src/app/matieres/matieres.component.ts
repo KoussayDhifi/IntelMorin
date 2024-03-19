@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./matieres.component.css']
 })
 export class MatieresComponent {
-  
+  public nmatiere :any;
 
 }

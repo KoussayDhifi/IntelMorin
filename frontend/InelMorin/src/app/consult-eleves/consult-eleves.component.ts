@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './consult-eleves.component.css'
 })
 export class ConsultElevesComponent {
-
+  public Nom :string=""; 
+  public Prenom :string="";
+  public Num : number=0 ; 
 }

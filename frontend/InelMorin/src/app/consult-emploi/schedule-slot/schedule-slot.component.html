@@ -1,0 +1,32 @@
+<div class="schedule">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-title">{{profName}} {{profLast}}</p>
+            <p class="card-text">{{matiere}}</p>
+            <form action="#" [class]="display">
+            <div class="row">
+            <label for="date" class="form-label col">Date du seance:</label>
+            <input type="date" [value]="date" class="form-control" id="date"  name="newDate" [(ngModel)] = "newDate">
+            </div>
+            <div class="row">
+                <label for="sh" class="form-label col">Heure Debut:</label>
+                <input type="time" class="form-control" id="sh" [value]="sHour" name = "newHeureDebut" [(ngModel)] = "newHeureDebut">
+            </div>
+            <div class="row">
+                <label for="eh" class="form-label col">Heure Fin:</label>
+                <input type="time" class="form-control" [value]="eHour" id="eh" name="newHeureFin" [(ngModel)] = "newHeureFin">
+            </div>
+            <div class="row">
+                <label for="groupe" class="form-label col">Groupe:</label>
+                <select name="groupe" id="groupe" class="form-control" [(ngModel)] = "newGroupe">
+                    <option value="#" disabled selected>Choisir Un groupe</option>
+                </select>
+            </div>
+            </form>
+        </div>
+        <div class="card-footer d-flex">
+            <button [class]="button" (click)="editSlot()">{{bValue}}</button>
+            <button class="btn btn-danger" (click)="deleteSlot()">Supprimer</button>
+        </div>
+    </div>
+</div>

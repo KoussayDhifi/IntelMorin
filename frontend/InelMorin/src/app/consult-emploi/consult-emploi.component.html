@@ -1,3 +1,47 @@
-<div class="content">
-    <p>Consulter!</p>
+<div class="content h-100">
+    <div class="title">
+        <img src="../../assets/Emploi du temps.png" alt="Emploi icon" class="w-70 h-50">
+        <h1>Consulter Emploi</h1>
+    </div>
+    <form action="" class="w-50 text-center">
+        <label for="date">Rechercher Par Date:</label>
+        <div class="input-group">
+            
+            <input type="date" id="date" class="form-control">
+            <button class="input-group-text btn btn-success">Rechercher</button>
+        
+        </div>
+    </form>
+    <table class="table table-bordered table-responsive h-100">
+
+        <tr>
+            <th>Temps/Salle</th>
+            <th>A001</th>
+            <th>A002</th>
+            <th>A003</th>
+            <th>A004</th>
+        </tr>
+        <tr>
+            <th>8-10</th>
+            <td><app-schedule-slot profName="Monji" profLast="Rahwi" matiere="Math" groupe="G002" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Zormati" matiere="Physique" groupe="G003" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Mounir" profLast="Yahyaoui" matiere="Info" groupe="G006" (data)="getEditedElement($event)"></app-schedule-slot></td>
+        </tr>
+        <tr>
+            <th>10-12</th> 
+            <td><app-schedule-slot profName="Monji" profLast="Rahwi" matiere="Math" groupe="G002" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Zormati" matiere="Physique" groupe="G003" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
+        </tr>
+        <tr>
+            <th>10-12</th> 
+            <td><app-schedule-slot profName="Monji" profLast="Rahwi" matiere="Math" groupe="G002" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Zormati" matiere="Physique" groupe="G003" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
+            <td><app-schedule-slot profName="Monji" profLast="Yahyaoui" matiere="Info" groupe="G004" (data)="getEditedElement($event)"></app-schedule-slot></td>
+        </tr>
+    </table>
+    
 </div>

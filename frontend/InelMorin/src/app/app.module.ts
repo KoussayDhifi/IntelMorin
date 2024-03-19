@@ -14,8 +14,13 @@ import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.componen
 import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 import { ConsultElevesComponent } from './consult-eleves/consult-eleves.component';
 import { CreateElevesComponent } from './create-eleves/create-eleves.component';
+
 import { CreatePacksComponent } from './create-packs/create-packs.component';
 import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
+
+import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-slot.component';
+
+
 
 
 
@@ -37,9 +42,15 @@ import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
     CreateEmploiComponent,
       ConsultElevesComponent,
       CreateElevesComponent,
+
       CreatePacksComponent,
       ConsultPacksComponent,
 
+
+
+      ScheduleSlotComponent,
+      
+      
 
 
 
