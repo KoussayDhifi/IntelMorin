@@ -19,7 +19,7 @@ export class ScheduleSlotComponent {
   @Input() sHour:Time | undefined;
   @Input() eHour:Time | undefined;
   @Input() idClassRoom:number | undefined;
-  @Input() date:Date | undefined;
+  @Input() date:Date | undefined; 
 
   @Output() data = new EventEmitter();
 
