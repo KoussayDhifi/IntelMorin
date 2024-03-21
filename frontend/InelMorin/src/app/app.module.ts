@@ -19,6 +19,9 @@ import { CreatePacksComponent } from './create-packs/create-packs.component';
 import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
 
 import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-slot.component';
+import { StudentPaymentComponent } from './student-payment/student-payment.component';
+import { StudentSlotComponent } from './student-payment/student-slot/student-slot.component';
+import { ProfGridComponent } from './student-payment/student-slot/prof-grid/prof-grid.component';
 
 
 
@@ -49,6 +52,9 @@ import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-s
 
 
       ScheduleSlotComponent,
+      StudentPaymentComponent,
+      StudentSlotComponent,
+      ProfGridComponent,
       
       
 

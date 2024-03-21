@@ -1,0 +1,10 @@
+<ul class="grid d-flex justify-content-center align-items-center">
+    <h4>{{ profName }}</h4>
+    <li *ngFor="let month of monthArr" >
+        <p *ngIf="month.paid;else con2" style="background-color: darkgreen;" (click)="toggleMonth(month)">{{ month.month }}</p>
+        <ng-template #con2>
+            <p style="background-color: red;" (click)="toggleMonth(month)">{{ month.month }}</p>
+        </ng-template>
+    </li>
+    <h4>{{ fee }}</h4>
+</ul>
