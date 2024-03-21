@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { MatieresComponent } from './matieres/matieres.component';
@@ -9,7 +9,7 @@ import { SallesComponent } from './salles/salles.component';
 import { AdminComponent } from './admin/admin.component';
 import { CreateElevesComponent } from './create-eleves/create-eleves.component';
 import { ConsultElevesComponent } from './consult-eleves/consult-eleves.component';
-
+import { StudentPaymentComponent } from './student-payment/student-payment.component';
 
 
 
@@ -40,10 +40,19 @@ const routes: Routes = [
       component:CreateEmploiComponent
     }
   ]},
+  {
+    path:'paiment',children:[
+      {
+      path:'eleve',
+      component:StudentPaymentComponent
+      }
+    ]
+  },
   {path:'emp',redirectTo:'/emploi/consulter',pathMatch:'full'} , 
   {path : 'salles', title: "Salles" ,component:SallesComponent} , 
   {path :'admin', title: "Admin" ,component:AdminComponent} , 
-  {path:'ele',redirectTo:'/eleves/consulter',pathMatch:'full'} 
+  {path:'ele',redirectTo:'/eleves/consulter',pathMatch:'full'}, 
+  {path:'pai',redirectTo:'/paiment/eleve'}
 
   
 ];

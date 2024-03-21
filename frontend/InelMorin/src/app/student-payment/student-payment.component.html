@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-center align-items-center">
+    <img src="../../assets/Paiement.png" alt="EleveIcon" id="EleveIcon">
+    <h1 style="font-family: Poppins;">Paiment</h1>
+</div>
+
+<div class="content">
+    <form action="#" class="d-flex align-items-center w-50 justify-content-center">
+        <div>
+      
+            <input type="text" name='nom' id="nom" [(ngModel)]="nom" class="form-control w-100 mr-5" placeholder="Nom et Prenom Etudiant">
+            
+        </div>
+        
+            <div class="input-group">
+                <select name="class" id="class" class="form-control" [(ngModel)]="classe">
+                    <option value="" selected disabled>Choisir Niveau</option>
+                    <option value="1er">1er Annee</option>
+                </select>
+                <input type="submit" class="btn btn-success input-group-text" value="Rechercher">
+            </div>
+    </form>
+
+    <app-student-slot></app-student-slot>
+    
+
+
+</div>
