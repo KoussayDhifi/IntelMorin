@@ -1,0 +1,16 @@
+<div class="container content w-100">
+    <div class="slot w-100 ">
+        <div class="shown d-flex justify-content-between">
+        <h2>Koussay Dhifi</h2>
+        <img src="../../../assets/Fleche.png" alt="Fleche" (click) = "toggleGrid()" [ngClass]="{expandArrow:expand,wrapArrow:!expand && expand !== undefined}">
+        </div>
+        <div class="show d-flex flex-column align-items-center border-bottom border-2 border-dark" [ngClass]="{'expandMenu':expand,wrapMenu:!expand && expand !== undefined}">
+            <app-prof-grid [ngClass]="{wrapMenu:!expand}" profName="Monji Zormati" fee="45"></app-prof-grid>
+            <app-prof-grid [ngClass]="{wrapMenu:!expand}" profName="Monji Zormati" fee="45"></app-prof-grid>
+            <app-prof-grid [ngClass]="{wrapMenu:!expand}" profName="Monji Zormati" fee="45"></app-prof-grid>
+            <app-prof-grid [ngClass]="{wrapMenu:!expand}" profName="Monji Zormati" fee="45"></app-prof-grid>
+        </div>
+    </div>
+    
+    
+</div>

@@ -12,14 +12,10 @@ input {
 }
 
 .InterfaceEnseignant img{
-  height: 100px;
-  width: 120px;
-}
-.InterfaceEnseignant img{
   height: 100px ;
   width: 150px;
 }
-    
+
     /* Apply Bootstrap styles to the select element */
 select  {
     display: block;
@@ -34,31 +30,31 @@ select  {
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
-  
+
   /* Apply Bootstrap styles to the select element when hovered */
   select :hover {
     border-color: #adb5bd;
   }
-  
+
   /* Apply Bootstrap styles to the select element when focused */
   select :focus {
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
-  
+
   /* Style for dropdown arrow */
   select :-ms-expand {
     background-color: transparent;
     border: none;
   }
-  
+
   /* Apply Bootstrap styles to the select element when disabled */
   select :disabled {
     background-color: #e9ecef;
     opacity: 1;
   }
-  
+
   #Btn1{
     font-family: Popins;
   }

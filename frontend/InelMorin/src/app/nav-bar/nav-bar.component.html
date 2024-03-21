@@ -1,14 +1,22 @@
 <div class="list-group">
     <a routerLink="/"><div class="list-group-item parent-item"><img src="../../assets/Acceuil.png" alt="AcceuilLogo" class="icon">Acceuil</div></a>
     <a routerLink="/matieres"><div class="list-group-item parent-item"><img src="../../assets/Matieres.png" alt="MatieresLogo" class="icon">Matieres</div></a>
-    <a routerLink=""><div class="list-group-item parent-item"><img src="../../assets/Packs.png" alt="PacksIcon" class="icon">Packs</div></a>
+    <div class="list-group-item parent-item" (click)="toggleItems3()"><img src="../../assets/Packs.png" alt="PacksIcon" class="icon">Packs</div>
+    <div class="toggleElm E" [style]=display3>
+      <a routerLink="/packs/create"><div class="list-group-item">Ajouter packs</div></a>
+      <a routerLink="/packs/consult"><div class="list-group-item">Consulter packs</div></a>
+    </div>
     <div class="list-group-item parent-item" (click)="toggleItems()"><img src="../../assets/Emploi du temps.png" alt="Emploi du temps Icon" class="icon">Emploi du temps</div>
     <div class="toggleElm E" [style]=display >
         <a routerLink="/emploi/ajouter"><div class="list-group-item">Ajouter Emploi du temps</div></a>
         <a routerLink="/emploi/consulter"><div class="list-group-item">Consulter Emploi du temps</div></a>
     </div>
     <a routerLink="salles"><div class="list-group-item parent-item"><img src="../../assets/salles.png" alt="SalleIcon" class="icon">Salles</div></a>
-    <a routerLink=""><div class="list-group-item parent-item"><img src="../../assets/Paiement.png" alt="paimentIcon" class="icon">Paiement</div></a>
+    <div class="list-group-item parent-item" (click)="toggleItems2()"><img src="../../assets/Paiement.png" alt="paimentIcon" class="icon">Paiement</div>
+    <div class="toggleElm E" [style]=display2 >
+        <a routerLink="pai"><div class="list-group-item">Paiement Eleves</div></a>
+        <a routerLink="/eleves/consulter"><div class="list-group-item">Paiment Enseignants</div></a>
+    </div>
     <a routerLink="/enseignants"><div class="list-group-item parent-item"><img src="../../assets/Enseignant.png" alt="EnseignantIcon" class="icon">Enseignants</div></a>
     <div class="list-group-item parent-item" (click)="toggleItems1()"><img src="../../assets/Eleves.png" alt="ElevesIcon" class="icon">Eleves</div>
     <div class="toggleElm E" [style]=display1 >
@@ -22,8 +30,8 @@
         <p class="success">Votre chemin du succès</p>
         <img src="../../assets/shlot.png" alt="ShlotIcon" class="shlot">
     </div>
-    
 
-</div>        
+
+</div>
 
 
