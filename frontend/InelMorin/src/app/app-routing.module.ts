@@ -15,6 +15,7 @@ import { StudentPaymentComponent } from './student-payment/student-payment.compo
 
 import { CreatePacksComponent } from './create-packs/create-packs.component';
 import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
+import { TutorPaymentComponent } from './tutor-payment/tutor-payment.component';
 
 
 
@@ -48,6 +49,10 @@ const routes: Routes = [
       {
       path:'eleve',
       component:StudentPaymentComponent
+      },
+      {
+        path:'enseignant',
+        component:TutorPaymentComponent
       }
     ]
   },
@@ -55,7 +60,8 @@ const routes: Routes = [
   {path : 'salles', title: "Salles" ,component:SallesComponent} , 
   {path :'admin', title: "Admin" ,component:AdminComponent} , 
   {path:'ele',redirectTo:'/eleves/consulter',pathMatch:'full'}, 
-  {path:'pai',redirectTo:'/paiment/eleve'},
+  {path:'paiel',redirectTo:'/paiment/eleve'},
+  {path:'paien',redirectTo:'/paiment/enseignant'},
   {path:'packs',children:[
     {path:'create',component:CreatePacksComponent},
     {path:'consult',component:ConsultPacksComponent},

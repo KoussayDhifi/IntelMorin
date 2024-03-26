@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center align-items-center">
+    <img src="../../assets/Paiement.png" alt="EleveIcon" id="EleveIcon">
+    <h1 style="font-family: Poppins;">Paiment</h1>
+</div>
+<div class="content">
+    <form (ngSubmit)="submitTest()" >
+        <div class="input-group">
+        <input type="text" name="profName" [(ngModel)]="profName" placeholder="Saisir Nom et prenom du prof" class="form-control" required aria-describedby="profError">
+        <input type="text" name="date" [(ngModel)]="dateP"  placeholder="Saisir le mois et annee" pattern="(0[1-9] | 1[012])/[0-9]{4}" required aria-describedby="nameError">
+        <input type="submit" class="input-group-text btn btn-success">
+        </div>
+        <p class="text-danger text-center" *ngIf="! isDateFormatValid(dateP)">Le format du date doit etre JJ/AAAA (exp 02/2024)</p>
+        <p class="text-danger text-center" *ngIf="!profName">Le nom et prenom du prof sont obligatoire</p>
+    </form>
+<app-tutor-info></app-tutor-info>
+<app-level-list></app-level-list>
+</div>
