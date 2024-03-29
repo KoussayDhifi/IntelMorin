@@ -12,8 +12,12 @@
         <p class="text-danger text-center" *ngIf="! isDateFormatValid(dateP)">Le format du date doit etre JJ/AAAA (exp 02/2024)</p>
         <p class="text-danger text-center" *ngIf="!profName">Le nom et prenom du prof sont obligatoire</p>
     </form>
-<div class="d-flex justify-content-between w-50">
-    <app-tutor-info name="Monji" lname="zormati" cin="15255964" style="border-right:2px solid black;padding: 60px;"></app-tutor-info>
-    <app-level-list></app-level-list>
+<div class="d-flex w-50">
+    <app-tutor-info name="Monji" lname="zormati" cin="1525665964" style="border-right:2px solid black;padding: 60px;"></app-tutor-info>
+    <div class="d-flex flex-column align-items-center justify-content-center">
+    <app-level-list level="3eme math"></app-level-list>
+    <app-level-list level="Bac Info "></app-level-list>
+    <app-level-list level="Bac eco "></app-level-list>
+</div>
 </div>
 </div>
