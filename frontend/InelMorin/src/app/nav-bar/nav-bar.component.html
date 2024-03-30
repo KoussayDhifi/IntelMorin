@@ -23,6 +23,11 @@
         <a routerLink="/eleves/ajouter"><div class="list-group-item">Ajouter Eleves</div></a>
         <a routerLink="/eleves/consulter"><div class="list-group-item">Consulter Eleves</div></a>
     </div>
+    <div class="list-group-item parent-item" (click)="toggleItems4()"><img src="../../assets/NombreEleves.png" alt="groupeIcon" class="icon">Groupes</div>
+    <div class="toggleElm E" [style]=display4 >
+        <a routerLink="/groupes/ajouter"><div class="list-group-item">Ajouter groupe</div></a>
+        <a routerLink="groupes/consulter"><div class="list-group-item">Consulter groupes</div></a>
+    </div>
     <a routerLink="/admin"><div class="list-group-item parent-item"> <img src="../../assets/Ajouter Admin.png" alt="AjouterAdminIcon" class="icon">Ajouter Admin</div></a>
     <img src="../../assets/Admin.png" alt="AdminPhoto" class="adminPhoto">
 

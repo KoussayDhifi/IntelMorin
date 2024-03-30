@@ -22,6 +22,7 @@ import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-s
 import { StudentPaymentComponent } from './student-payment/student-payment.component';
 import { StudentSlotComponent } from './student-payment/student-slot/student-slot.component';
 import { ProfGridComponent } from './student-payment/student-slot/prof-grid/prof-grid.component';
+
 import { TutorPaymentComponent } from './tutor-payment/tutor-payment.component';
 import { TutorInfoComponent } from './tutor-payment/tutor-info/tutor-info.component';
 import { LevelListComponent } from './tutor-payment/level-list/level-list.component';
@@ -60,12 +61,14 @@ import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.com
       StudentPaymentComponent,
       StudentSlotComponent,
       ProfGridComponent,
+
       TutorPaymentComponent,
       TutorInfoComponent,
       LevelListComponent,
       GridPaymentComponent,
       ConfigProfComponent,
       CalcCentreComponent,      
+
       
 
 
