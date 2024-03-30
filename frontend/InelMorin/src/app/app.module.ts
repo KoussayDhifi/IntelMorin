@@ -25,8 +25,6 @@ import { ProfGridComponent } from './student-payment/student-slot/prof-grid/prof
 import { TutorPaymentComponent } from './tutor-payment/tutor-payment.component';
 import { TutorInfoComponent } from './tutor-payment/tutor-info/tutor-info.component';
 import { LevelListComponent } from './tutor-payment/level-list/level-list.component';
-import { LevelComponent } from './tutor-payment/level-list/level/level.component';
-import { StudentListComponent } from './tutor-payment/level-list/level/student-list/student-list.component';
 import { GridPaymentComponent } from './tutor-payment/grid-payment/grid-payment.component';
 import { ConfigProfComponent } from './tutor-payment/config-prof/config-prof.component';
 import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.component';
@@ -65,8 +63,6 @@ import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.com
       TutorPaymentComponent,
       TutorInfoComponent,
       LevelListComponent,
-      LevelComponent,
-      StudentListComponent,
       GridPaymentComponent,
       ConfigProfComponent,
       CalcCentreComponent,      

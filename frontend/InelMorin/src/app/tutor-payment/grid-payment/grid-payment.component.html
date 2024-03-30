@@ -1,1 +1,11 @@
-<p>grid-payment works!</p>
+
+<ul class="grid d-flex justify-content-center align-items-center">
+    
+    <li *ngFor="let month of monthArr" >
+        <p *ngIf="month.paid;else con2" style="background-color: darkgreen;" (click)="toggleMonth(month)">{{ month.month }}</p>
+        <ng-template #con2>
+            <p style="background-color: red;" (click)="toggleMonth(month)">{{ month.month }}</p>
+        </ng-template>
+    </li>
+    
+</ul>

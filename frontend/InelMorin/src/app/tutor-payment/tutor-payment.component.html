@@ -12,6 +12,27 @@
         <p class="text-danger text-center" *ngIf="! isDateFormatValid(dateP)">Le format du date doit etre JJ/AAAA (exp 02/2024)</p>
         <p class="text-danger text-center" *ngIf="!profName">Le nom et prenom du prof sont obligatoire</p>
     </form>
-<app-tutor-info></app-tutor-info>
-<app-level-list></app-level-list>
+    <div style="width: 70vw; border-bottom: solid 1px black;">
+    <div class="shown d-flex justify-content-between align-items-center">
+        <app-tutor-info name="Monji" lname="zormati" cin="1525665964" style="width: 100vw;"></app-tutor-info>
+        <img src="../../assets/Fleche.png" alt="fleche" (click) = "toggleGrid()" style="width: 50px;height: 50px;" [ngClass]="{expandArrow:expand,wrapArrow:!expand && expand !== undefined}">
+    </div>
+<div class="d-flex flex-column"  [ngClass]="{'expandMenu':expand,wrapMenu:!expand && expand !== undefined}">
+<div class="d-flex justify-content-center align-items-center" [ngClass]="{wrapMenu:!expand}">
+    <div class="d-flex flex-column align-items-center justify-content-center" [ngClass]="{wrapMenu:!expand}">
+    <app-level-list level="3eme math" [ngClass]="{wrapMenu:!expand}"></app-level-list>
+    <app-level-list level="Bac Info " [ngClass]="{wrapMenu:!expand}"></app-level-list>
+    <app-level-list level="Bac eco " [ngClass]="{wrapMenu:!expand}"></app-level-list>
+</div>
+
+</div>
+<div class="d-flex align-items-center flex-column" [ngClass]="{wrapMenu:!expand}">
+<app-grid-payment [ngClass]="{wrapMenu:!expand}"></app-grid-payment>
+<div class="d-flex justify-content-around" style="width: 100%;">
+<app-config-prof [ngClass]="{wrapMenu:!expand}"></app-config-prof>
+<app-calc-centre [ngClass]="{wrapMenu:!expand}"></app-calc-centre>
+</div>
+</div>
+</div>
+</div>
 </div>
