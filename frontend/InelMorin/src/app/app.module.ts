@@ -22,6 +22,9 @@ import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-s
 import { StudentPaymentComponent } from './student-payment/student-payment.component';
 import { StudentSlotComponent } from './student-payment/student-slot/student-slot.component';
 import { ProfGridComponent } from './student-payment/student-slot/prof-grid/prof-grid.component';
+import { ConsultGroupComponent } from './consult-group/consult-group.component';
+import { CreateGroupComponent } from './create-group/create-group.component';
+import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component';
 
 
 
@@ -55,6 +58,9 @@ import { ProfGridComponent } from './student-payment/student-slot/prof-grid/prof
       StudentPaymentComponent,
       StudentSlotComponent,
       ProfGridComponent,
+      ConsultGroupComponent,
+      CreateGroupComponent,
+      ProfSlotComponent,
       
       
 

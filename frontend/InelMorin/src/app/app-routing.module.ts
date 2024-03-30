@@ -16,7 +16,8 @@ import { StudentPaymentComponent } from './student-payment/student-payment.compo
 import { CreatePacksComponent } from './create-packs/create-packs.component';
 import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
 
-
+import { CreateGroupComponent } from './create-group/create-group.component';
+import { ConsultGroupComponent } from './consult-group/consult-group.component';
 
 const routes: Routes = [
   {path:'', title:'Acceuil',component:AcceuilComponent},
@@ -51,11 +52,22 @@ const routes: Routes = [
       }
     ]
   },
+  {path:'groupes',children:[
+    {
+      path:'consulter',
+      component:ConsultGroupComponent
+    },
+    {
+      path:'ajouter',
+      component:CreateGroupComponent
+    }
+  ]},
   {path:'emp',redirectTo:'/emploi/consulter',pathMatch:'full'} , 
   {path : 'salles', title: "Salles" ,component:SallesComponent} , 
   {path :'admin', title: "Admin" ,component:AdminComponent} , 
   {path:'ele',redirectTo:'/eleves/consulter',pathMatch:'full'}, 
   {path:'pai',redirectTo:'/paiment/eleve'},
+  {path:'gro',redirectTo:'/groupes/consulter',pathMatch:'full'},
   {path:'packs',children:[
     {path:'create',component:CreatePacksComponent},
     {path:'consult',component:ConsultPacksComponent},

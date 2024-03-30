@@ -84,3 +84,13 @@ img:hover {
         display: none;
     }
 }
+#circular-img {
+    border-radius: 50%;
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; 
+}
+
+

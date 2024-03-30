@@ -58,3 +58,17 @@ select  {
   #Btn1{
     font-family: Popins;
   }
+  #custom-button {
+    margin-top: 32px; 
+    margin-left: -25px;
+}
+.btn-circle {
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px; 
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
