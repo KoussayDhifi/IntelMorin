@@ -22,10 +22,13 @@ import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-s
 import { StudentPaymentComponent } from './student-payment/student-payment.component';
 import { StudentSlotComponent } from './student-payment/student-slot/student-slot.component';
 import { ProfGridComponent } from './student-payment/student-slot/prof-grid/prof-grid.component';
-import { ConsultGroupComponent } from './consult-group/consult-group.component';
-import { CreateGroupComponent } from './create-group/create-group.component';
-import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component';
 
+import { TutorPaymentComponent } from './tutor-payment/tutor-payment.component';
+import { TutorInfoComponent } from './tutor-payment/tutor-info/tutor-info.component';
+import { LevelListComponent } from './tutor-payment/level-list/level-list.component';
+import { GridPaymentComponent } from './tutor-payment/grid-payment/grid-payment.component';
+import { ConfigProfComponent } from './tutor-payment/config-prof/config-prof.component';
+import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.component';
 
 
 
@@ -58,10 +61,14 @@ import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component
       StudentPaymentComponent,
       StudentSlotComponent,
       ProfGridComponent,
-      ConsultGroupComponent,
-      CreateGroupComponent,
-      ProfSlotComponent,
-      
+
+      TutorPaymentComponent,
+      TutorInfoComponent,
+      LevelListComponent,
+      GridPaymentComponent,
+      ConfigProfComponent,
+      CalcCentreComponent,      
+
       
 
 
