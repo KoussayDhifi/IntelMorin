@@ -29,8 +29,9 @@ import { LevelListComponent } from './tutor-payment/level-list/level-list.compon
 import { GridPaymentComponent } from './tutor-payment/grid-payment/grid-payment.component';
 import { ConfigProfComponent } from './tutor-payment/config-prof/config-prof.component';
 import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.component';
-
-
+import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
+import { ConsultGroupComponent } from './consult-group/consult-group.component';
+import { CreateGroupComponent } from './create-group/create-group.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.com
     NavBarComponent,
     MatieresComponent,
     EnseignantsComponent,
-
+    ConsultGroupComponent,
+    CreateGroupComponent,
 
     AdminComponent,
     SallesComponent,
@@ -67,7 +69,8 @@ import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.com
       LevelListComponent,
       GridPaymentComponent,
       ConfigProfComponent,
-      CalcCentreComponent,      
+      CalcCentreComponent,
+      ProfCardComponent,      
 
       
 
