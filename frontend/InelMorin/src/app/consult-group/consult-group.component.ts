@@ -4,6 +4,7 @@ import { Output,EventEmitter } from '@angular/core';
 
 
 
+
 @Component({
   selector: 'app-consult-group',
   templateUrl: './consult-group.component.html',
