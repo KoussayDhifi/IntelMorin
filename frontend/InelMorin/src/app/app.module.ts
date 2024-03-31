@@ -15,6 +15,7 @@ import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 import { ConsultElevesComponent } from './consult-eleves/consult-eleves.component';
 import { CreateElevesComponent } from './create-eleves/create-eleves.component';
 
+
 import { CreatePacksComponent } from './create-packs/create-packs.component';
 import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
 
@@ -31,6 +32,11 @@ import { ConfigProfComponent } from './tutor-payment/config-prof/config-prof.com
 import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.component';
 
 
+import { ConsultGroupComponent } from './consult-group/consult-group.component';
+import { CreateGroupComponent } from './create-group/create-group.component';
+import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component';
+
+
 
 
 @NgModule({
@@ -41,6 +47,9 @@ import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.com
     NavBarComponent,
     MatieresComponent,
     EnseignantsComponent,
+    ConsultGroupComponent,
+    CreateGroupComponent , 
+    ProfSlotComponent , 
 
 
     AdminComponent,
