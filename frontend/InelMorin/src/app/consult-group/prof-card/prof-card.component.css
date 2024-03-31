@@ -1,0 +1,94 @@
+img {
+    height: 50px;
+    width: 50px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.show {
+    display: none;
+}
+
+.shown {
+    width: 75vw;
+    overflow: show;
+}
+
+.slot {
+    max-height: max-content;
+}
+
+.expandMenu {
+    animation-name: expand;
+    animation-duration: 1s;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.wrapMenu {
+    animation: wrapM 1s;
+    overflow-y: hidden;
+   display: none;
+}
+
+.expandArrow {
+    animation-name: rotate;
+    animation-duration: 1s;
+    transform: rotate(180deg);
+}
+
+.wrapArrow {
+    animation: rrotate 1s;
+    transform: rotate(0deg);
+}
+
+
+
+@keyframes expand {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rrotate {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes wrapM {
+    from {
+        height: 100%;
+        display: block;
+    }
+    to {
+        height: 0%;
+        display: none;
+    }
+}
+#circular-img {
+    border-radius: 50%;
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; 
+}

@@ -31,6 +31,7 @@ import { ConfigProfComponent } from './tutor-payment/config-prof/config-prof.com
 import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.component';
 
 
+
 import { ConsultGroupComponent } from './consult-group/consult-group.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
 import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component';
@@ -42,6 +43,11 @@ import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.co
 
 
 
+import { ConsultGroupComponent } from './consult-group/consult-group.component';
+import { CreateGroupComponent } from './create-group/create-group.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,10 +55,16 @@ import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.co
     BarComponent,
     NavBarComponent,
     MatieresComponent,
+
    
     ConsultGroupComponent,
     CreateGroupComponent , 
     ProfSlotComponent , 
+
+
+    EnseignantsComponent,
+    ConsultGroupComponent,
+    CreateGroupComponent,
 
 
     AdminComponent,
@@ -80,11 +92,15 @@ import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.co
       GridPaymentComponent,
       ConfigProfComponent,
       CalcCentreComponent,
+
       ConsultEnseignantComponent,
       CreateEnseignantComponent,
       TutorSlotComponent,
       ElevesSlotComponent,
            
+
+        
+
 
       
 
