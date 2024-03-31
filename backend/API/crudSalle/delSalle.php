@@ -6,7 +6,7 @@ $data = json_decode(file_get_contents('php://input'),true);
 
 $labelSalle = $data['salle'];
 
-$query = "DELETE FROM CLASSROOM WHERE LABELCLASS='$labelSalle'";
+$query = "DELETE FROM CLASSROOM WHERE ID_CLASS='$labelSalle'";
 
 
 if ($conn->query($query) == TRUE) {

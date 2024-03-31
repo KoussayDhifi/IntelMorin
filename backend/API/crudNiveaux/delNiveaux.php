@@ -4,9 +4,9 @@ require_once '../../connect/db_connect.php';
 
 $data = json_decode(file_get_contents('php://input'),true);
 
-$labelSub = $data['matiere'];
+$labelSub = $data['niveaux'];
 
-$query = "DELETE FROM SUBJECT WHERE ID_SUBJ='$labelSub'";
+$query = "DELETE FROM LEVEL WHERE ID_LEVEL='$labelSub'";
 
 
 if ($conn->query($query) == TRUE) {
