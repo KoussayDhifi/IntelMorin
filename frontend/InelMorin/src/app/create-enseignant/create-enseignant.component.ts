@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-enseignants',
-  templateUrl:'./enseignants.component.html',
-  styleUrls: ['../../../node_modules/bootstrap/dist/css/bootstrap.min.css' , './enseignants.component.css']
+  selector: 'app-create-enseignant',
+  templateUrl: './create-enseignant.component.html',
+  styleUrl: './create-enseignant.component.css'
 })
-export class EnseignantsComponent {
+export class CreateEnseignantComponent {
   nom: string = '' ; 
   prenom : string ='' ; 
   DateNP : any ='' ;

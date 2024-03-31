@@ -2,7 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { MatieresComponent } from './matieres/matieres.component';
-import { EnseignantsComponent } from './enseignants/enseignants.component';
+
 import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.component';
 import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 import { SallesComponent } from './salles/salles.component';
@@ -19,11 +19,12 @@ import { TutorPaymentComponent } from './tutor-payment/tutor-payment.component';
 
 import { CreateGroupComponent } from './create-group/create-group.component';
 import { ConsultGroupComponent } from './consult-group/consult-group.component';
+import { ConsultEnseignantComponent } from './consult-enseignant/consult-enseignant.component';
+import { CreateEnseignantComponent } from './create-enseignant/create-enseignant.component';
 
 const routes: Routes = [
   {path:'', title:'Acceuil',component:AcceuilComponent},
   {path:'matieres', title:'Matieres',component:MatieresComponent} ,
-  {path: 'enseignants', title:'Enseignants',component:EnseignantsComponent},
   {path: 'eleves',children:[
     {
       path:'consulter' ,
@@ -33,6 +34,16 @@ const routes: Routes = [
       path:'ajouter' ,
       component:CreateElevesComponent
     } ,
+]},
+{path: 'enseignants',children:[
+  {
+    path:'consulter' ,
+    component:ConsultEnseignantComponent
+  },
+  {
+    path:'ajouter' ,
+    component:CreateEnseignantComponent
+  } ,
 ]},
   {path:'emploi',children:[
     {

@@ -7,13 +7,13 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { BarComponent } from './bar/bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatieresComponent } from './matieres/matieres.component';
-import { EnseignantsComponent } from './enseignants/enseignants.component';
 import { AdminComponent } from './admin/admin.component';
 import { SallesComponent } from './salles/salles.component';
 import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.component';
 import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 import { ConsultElevesComponent } from './consult-eleves/consult-eleves.component';
 import { CreateElevesComponent } from './create-eleves/create-eleves.component';
+
 
 import { CreatePacksComponent } from './create-packs/create-packs.component';
 import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
@@ -29,9 +29,23 @@ import { LevelListComponent } from './tutor-payment/level-list/level-list.compon
 import { GridPaymentComponent } from './tutor-payment/grid-payment/grid-payment.component';
 import { ConfigProfComponent } from './tutor-payment/config-prof/config-prof.component';
 import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.component';
-import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
+
+
+
 import { ConsultGroupComponent } from './consult-group/consult-group.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
+import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component';
+import { ConsultEnseignantComponent } from './consult-enseignant/consult-enseignant.component';
+import { CreateEnseignantComponent } from './create-enseignant/create-enseignant.component';
+import { TutorSlotComponent } from './consult-enseignant/tutor-slot/tutor-slot.component';
+import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.component';
+
+
+
+
+import { ConsultGroupComponent } from './consult-group/consult-group.component';
+import { CreateGroupComponent } from './create-group/create-group.component';
+
 
 
 @NgModule({
@@ -41,9 +55,17 @@ import { CreateGroupComponent } from './create-group/create-group.component';
     BarComponent,
     NavBarComponent,
     MatieresComponent,
+
+   
+    ConsultGroupComponent,
+    CreateGroupComponent , 
+    ProfSlotComponent , 
+
+
     EnseignantsComponent,
     ConsultGroupComponent,
     CreateGroupComponent,
+
 
     AdminComponent,
     SallesComponent,
@@ -70,7 +92,15 @@ import { CreateGroupComponent } from './create-group/create-group.component';
       GridPaymentComponent,
       ConfigProfComponent,
       CalcCentreComponent,
-      ProfCardComponent,      
+
+      ConsultEnseignantComponent,
+      CreateEnseignantComponent,
+      TutorSlotComponent,
+      ElevesSlotComponent,
+           
+
+        
+
 
       
 

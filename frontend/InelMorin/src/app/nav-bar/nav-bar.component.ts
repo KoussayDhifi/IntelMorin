@@ -12,6 +12,7 @@ export class NavBarComponent {
   public display2:string ="display:none";
   public display3:string ="display:none";
   public display4:string ="display:none";
+  public display5:string ="display:none";
 
   toggleItems () {
     (this.display == "display:none")? this.display="display:block;" : this.display="display:none";
@@ -31,5 +32,9 @@ export class NavBarComponent {
   toggleItems4() {
     (this.display4 == "display:none")? this.display4="display:block;" : this.display4="display:none";
   }
+  toggleItems5() {
+    (this.display5 == "display:none")? this.display5="display:block;" : this.display5="display:none";
+  }
+
 
 }
