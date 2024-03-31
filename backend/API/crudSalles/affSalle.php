@@ -1,8 +1,8 @@
 <?php
 
-require_once '../connect/db_connect.php';
+require_once '../../connect/db_connect.php';
 
-$req = 'SELECT LABELCLASS FROM CLASSROOM;';
+$req = 'SELECT * FROM CLASSROOM;';
 $res = $conn->query($req);
 
 if ($res->num_rows>0) {

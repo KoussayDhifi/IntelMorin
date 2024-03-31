@@ -1,12 +1,12 @@
 <?php
 
-require_once '../connect/db_connect.php';
+require_once '../../connect/db_connect.php';
 
 $data = json_decode(file_get_contents('php://input'),true);
 
 $labelSalle = $data['salle'];
 
-$query = "DELETE FROM CLASSROOM WHERE LABELCLASS='$labelSalle'";
+$query = "DELETE FROM CLASSROOM WHERE ID_CLASSROOM='$labelSalle'";
 
 
 if ($conn->query($query) == TRUE) {
