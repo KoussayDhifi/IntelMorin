@@ -29,7 +29,7 @@ import { LevelListComponent } from './tutor-payment/level-list/level-list.compon
 import { GridPaymentComponent } from './tutor-payment/grid-payment/grid-payment.component';
 import { ConfigProfComponent } from './tutor-payment/config-prof/config-prof.component';
 import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.component';
-
+import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component';
 
 
 
@@ -41,7 +41,7 @@ import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.com
     NavBarComponent,
     MatieresComponent,
     EnseignantsComponent,
-
+    ProfSlotComponent,
 
     AdminComponent,
     SallesComponent,
