@@ -1,84 +1,19 @@
-
 <div class="InterfaceEnseignant">
-    <img src="../../assets/Eleves.png" alt="EleveIcon" id="EleveIcon">
-    <h1 style="font-family: Poppins;">Consulter eleves</h1>
+    <img src="../../assets/Enseignant.png" alt="EnseignantIcon" id="NombreElevesIcon">
+    <h1 style="font-family: Poppins;">Consulter Eleves</h1>
 </div>
 
-<div class="row border-top border-bottom mt-5">
-    <div class="col-3 offset-1 mt-3">
-        <p class="font-weight-bold " style="font-size: 20px;">Liste des eleves</p>    
-    </div>
-</div>
-<form action="#">
-    <div class="row">
-        <div class="col-3 offset-5 mt-3">
-            <label for="eleve" class="offset-3">Rechercher:</label>
-            <div class="input-group">
-                <input type="text" id="eleve" class="form-control" placeholder="Nom&Prenom Eleve ..." style="font-family: Poppins;">
-                <button class="input-group-text btn btn-success">Rechercher</button>
-            </div>        
+<div class="content mt-4">
+    <form action="#" class="d-flex align-items-center w-50 justify-content-center offset-4">
+        <div>
+            <input type="text" name='nom' id="nom"  class="form-control w-100 mr-5" placeholder="Nom du l'élève" style="font-family: Poppins;">     
         </div>
-    </div>
-</form>
-<div class="row">
-    <div class="col offset-1 mt-3">
-        <table class="table table-bordered">            
-         <tr >
-            <th>#</th>
-            <th>Nom</th>
-            <th>Prenom</th>
-            <th>Editer</th>
-            <th>Supprimer</th>
-            
-        </tr>
-        <tr>
-            <th>{{Num}}</th>
-            <th>{{Nom}}</th>
-            <th>{{Prenom}}</th>
-            <th><button class="btn btn-primary">Editer</button></th>  
-            <th><button class="btn btn-danger">Supprimer</button></th>
-             
-        </tr>
-        <tr>
-            <th>{{Num}}</th>
-            <th>{{Nom}}</th>
-            <th>{{Prenom}}</th>
-            <th><button class="btn btn-primary">Editer</button></th>  
-            <th><button class="btn btn-danger">Supprimer</button></th>
-             
-        </tr>
-        <tr>
-            <th>{{Num}}</th>
-            <th>{{Nom}}</th>
-            <th>{{Prenom}}</th>
-            <th><button class="btn btn-primary">Editer</button></th>  
-            <th><button class="btn btn-danger">Supprimer</button></th>
-             
-        </tr>
-        <tr>
-            <th>{{Num}}</th>
-            <th>{{Nom}}</th>
-            <th>{{Prenom}}</th>
-            <th><button class="btn btn-primary">Editer</button></th>  
-            <th><button class="btn btn-danger">Supprimer</button></th>
-             
-        </tr>
-        </table>
         
-            <div class="row offset-9">
-                <div class="col-auto">
-                    <button class="btn btn-light">Previous</button>
-                </div>
-                <div class="col-auto">
-                    <p class="bg-primary text-white px-3 py-2 rounded">1</p>
-                </div>
-                <div class="col-auto">
-                    <button class="btn btn-light">Next</button>
-                </div>
+            <div class="input-group ">
+                <input type="submit" class="btn btn-success input-group-text" value="Rechercher" >
             </div>
-        
-                
-    </div>
+    </form>
+
+
+   <app-eleves-slot></app-eleves-slot>
 </div>
-
-

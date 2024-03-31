@@ -1,0 +1,43 @@
+<div class="container content w-100">
+    <div class="slot w-100 " style="border-bottom: 1px solid black ;">
+        <div class="shown d-flex justify-content-between align-items-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h2>Seifeddine Jaziri</h2>
+                </div>
+               
+            </div>
+            <img src="../../../assets/Fleche.png" alt="Fleche" (click)="toggleGrid()" [ngClass]="{expandArrow:expand, wrapArrow:!expand && expand !== undefined}" class="mt-3">
+        </div>
+        <div class="card-container">
+            <div class="card move-left mb-3" style="width: 18rem;" [ngClass]="{wrapMenu:!expand}">
+               
+                <div class="card-body">
+                    <h5 class="card-title text-center">Seifeddine Jaziri</h5>
+                </div>
+                <ul class="list-group list-group-flush text-center">
+                    <li class="list-group-item">Identifiant du l'élève: 900251485</li>
+                    <li class="list-group-item">Nom Lycée: Lycée Jandouba </li>
+                    <li class="list-group-item">Tel: 54 233 009</li>
+                    <li class="list-group-item">Niveau :Bac Sport </li>
+                </ul>
+                <div class="card-body text-center"></div>
+            </div>
+            <div class="card move-left mb-3" style="width: 18rem;" [ngClass]="{wrapMenu:!expand}">
+                
+                <div class="card-body">
+                    <h5 class="card-title text-center">Matieres</h5>
+                </div>
+                <ul class="list-group list-group-flush text-center ">
+                    <li class="list-group-item">Matière(s): [Physique , Math , Espagnol] </li>
+                   
+                </ul>
+                <div class="card-body text-center"></div>
+            </div>
+            <div class="offset-5 mb-3 "[ngClass]="{wrapMenu:!expand}"> 
+                <button class="btn btn-danger mt-1">Supprimer</button>
+                <button class="btn btn-primary mt-1 " (click)="editSlot()" [class]="button">{{bValue}}</button>
+            </div>
+        </div>
+    </div>
+</div>

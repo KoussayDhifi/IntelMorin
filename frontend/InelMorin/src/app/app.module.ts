@@ -7,7 +7,6 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { BarComponent } from './bar/bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatieresComponent } from './matieres/matieres.component';
-import { EnseignantsComponent } from './enseignants/enseignants.component';
 import { AdminComponent } from './admin/admin.component';
 import { SallesComponent } from './salles/salles.component';
 import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.component';
@@ -35,6 +34,10 @@ import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.com
 import { ConsultGroupComponent } from './consult-group/consult-group.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
 import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component';
+import { ConsultEnseignantComponent } from './consult-enseignant/consult-enseignant.component';
+import { CreateEnseignantComponent } from './create-enseignant/create-enseignant.component';
+import { TutorSlotComponent } from './consult-enseignant/tutor-slot/tutor-slot.component';
+import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.component';
 
 
 
@@ -46,7 +49,7 @@ import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component
     BarComponent,
     NavBarComponent,
     MatieresComponent,
-    EnseignantsComponent,
+   
     ConsultGroupComponent,
     CreateGroupComponent , 
     ProfSlotComponent , 
@@ -76,7 +79,12 @@ import { ProfSlotComponent } from './consult-group/prof-slot/prof-slot.component
       LevelListComponent,
       GridPaymentComponent,
       ConfigProfComponent,
-      CalcCentreComponent,      
+      CalcCentreComponent,
+      ConsultEnseignantComponent,
+      CreateEnseignantComponent,
+      TutorSlotComponent,
+      ElevesSlotComponent,
+           
 
       
 
