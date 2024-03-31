@@ -1,12 +1,12 @@
 <?php
 
-require_once '../connect/db_connect.php';
+require_once '../../connect/db_connect.php';
 
 $data = json_decode(file_get_contents('php://input'),true);
 
-$labelSalle = $data['salle'];
+$labelSub = $data['niveaux'];
 
-$query = "DELETE FROM CLASSROOM WHERE LABELCLASS='$labelSalle'";
+$query = "DELETE FROM LEVEL WHERE ID_LEVEL='$labelSub'";
 
 
 if ($conn->query($query) == TRUE) {
@@ -16,3 +16,5 @@ if ($conn->query($query) == TRUE) {
     http_response_code(400);
     echo json_encode(array('msg'=>'Repeter une autre fois'));
 }
+
+$conn->close();
