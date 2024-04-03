@@ -2,11 +2,7 @@
 
 require_once '../../connect/db_connect.php';
 
-$data = json_decode(file_get_contents('php://input'),true);
-
-$prof = $data['id_tut'];
-
-$req = 'SELECT * FROM GROUPE,TUTOR WHERE ID_TU='$prof' AND ID_TU=ID_TUTOR;';
+$req = 'SELECT * FROM PACK,LEVEL,SUBJECTPACK,SUBJECT WHERE LEVELPACK = ID_LEVEL AND ID_PACK=PACKI AND SUBJI = ID_SUBJ';
 $res = $conn->query($req);
 
 if ($res->num_rows>0) {
