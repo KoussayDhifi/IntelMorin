@@ -1,45 +1,64 @@
-<div class="content">
-  <div class="InterfacePacks">
-    <img src="../../assets/Packs.png" alt="PacksIcon" id="PacksIcon">
-    <h1 style="font-family: Poppins;">Packs</h1>
+<div class="InterfacePacks">
+  <img src="../../assets/Packs.png" alt="PacksIcon" id="PacksIcon">
+  <h1 style="font-family: Poppins;">Packs</h1>
 </div>
+<div class="content">
 <div class="container">
-  <form action="" class="was-validated">
-    <div class="row mt-2">
-      <div class="col-3">
-        <label for="section" class="form-label">Section: </label>
-        <input type="text" name="section" id="section" class="form-control">
+  <form [formGroup]="packForm">
+      <div formArrayName="packList" >
+        <div class="packs" *ngFor="let pack of packListArray().controls ; let i = index">
+          <div [formGroupName]="i">
+            <div class="row">
+              <label for="section">Section:</label>
+              <select class="form-select" aria-label="Default select example" formControlName="section">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="row">
+              <label for="niveau">Niveau :</label>
+              <select class="form-select" aria-label="Default select example" formControlName="niveau">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="row">
+              <label for="prix">Prix :</label>
+              <input type="text"  id="prix" class="form-control" formControlName="prix">
+            </div>
+            <div class="row">
+              <button type="button" *ngIf="packListArray().length >1 " class="btn btn-sm  btn-danger mt-3" (click)="removePack(i)">Supprimer </button>
+            </div>
+            <div [formGroup]="matiereFormGroup(i)">
+              <div formArrayName="matierePackArray">
+                <div class="row" *ngFor="let matierePack of matieresArray(i).controls ; let j= index">
+                  <div formGroupName="j">
+                  <label for="matiere">Matiere :</label>
+                  <select class="form-select" aria-label="Default select example" formControlName="matiere">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <button type="button" class=" btn-sm btn-danger mt-3" (click)="removeSubject(i,j)" *ngIf="matieresArray(i).length >1">Supprimer </button>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn  btn-warning mt-3 " (click)="addSubject(i)">Ajouter Matiere</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row mt-2">
-      <div class="col-3">
-        <label for="matiere">Matiere: </label>
-        <select class="form-select" id="matiere" aria-label="Default select example">
-            <option selected>Open </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+      <div class="row  offset-2">
+        <button type="button" class="btn btn-warning mt-3 offset-3" (click)="addPack()">Ajouter Pack</button>
+        <button type="button" class="btn btn-primary mt-3 offset-1 " >Creer</button>
       </div>
-    </div>
-    <div class="row mt-2">
-      <div class="col-3">
-        <label for="niveau">Niveau: </label>
-        <select class="form-select" id="niveau" aria-label="Default select example">
-            <option selected>Open </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-      </div>
-    </div>
-    <div class="row mt-2">
-      <div class="col-3">
-        <label for="prix" class="form-label">Prix:</label>
-        <input type="text" name="prix" id="prix" class="form-control">
-      </div>
-    </div>
-    <input type="Submit" class="btn btn-primary  mt-4 " name="ButtonAjouter" value="Ajouter" id="Btn1">
-   </form>
+  </form>
 </div>
 </div>

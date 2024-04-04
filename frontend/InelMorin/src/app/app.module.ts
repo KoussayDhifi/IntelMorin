@@ -15,8 +15,7 @@ import { ConsultElevesComponent } from './consult-eleves/consult-eleves.componen
 import { CreateElevesComponent } from './create-eleves/create-eleves.component';
 
 
-import { CreatePacksComponent } from './create-packs/create-packs.component';
-import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
+
 
 import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-slot.component';
 import { StudentPaymentComponent } from './student-payment/student-payment.component';
@@ -30,7 +29,8 @@ import { GridPaymentComponent } from './tutor-payment/grid-payment/grid-payment.
 import { ConfigProfComponent } from './tutor-payment/config-prof/config-prof.component';
 import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.component';
 
-
+import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
+import { CreatePacksComponent } from './create-packs/create-packs.component';
 
 import { ConsultGroupComponent } from './consult-group/consult-group.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
@@ -41,6 +41,7 @@ import { TutorSlotComponent } from './consult-enseignant/tutor-slot/tutor-slot.c
 import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.component';
 import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -54,13 +55,13 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
     NavBarComponent,
     MatieresComponent,
     ProfCardComponent,
-   
+
     ConsultGroupComponent,
-    CreateGroupComponent , 
-   
+    CreateGroupComponent ,
 
 
-   
+
+
     ConsultGroupComponent,
     CreateGroupComponent,
 
@@ -74,8 +75,7 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
       ConsultElevesComponent,
       CreateElevesComponent,
 
-      CreatePacksComponent,
-      ConsultPacksComponent,
+
 
 
 
@@ -95,12 +95,13 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
       CreateEnseignantComponent,
       TutorSlotComponent,
       ElevesSlotComponent,
-           
+      CreatePacksComponent,
+      ConsultPacksComponent,
 
-        
 
 
-      
+
+
 
 
 
@@ -108,7 +109,8 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

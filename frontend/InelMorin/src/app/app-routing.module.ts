@@ -13,14 +13,14 @@ import { ConsultElevesComponent } from './consult-eleves/consult-eleves.componen
 import { StudentPaymentComponent } from './student-payment/student-payment.component';
 
 
-import { CreatePacksComponent } from './create-packs/create-packs.component';
-import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
 import { TutorPaymentComponent } from './tutor-payment/tutor-payment.component';
 
 import { CreateGroupComponent } from './create-group/create-group.component';
 import { ConsultGroupComponent } from './consult-group/consult-group.component';
 import { ConsultEnseignantComponent } from './consult-enseignant/consult-enseignant.component';
-import { CreateEnseignantComponent } from './create-enseignant/create-enseignant.component';
+import { CreateEnseignantComponent } from './create-enseignant/create-enseignant.component'
+import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
+import { CreatePacksComponent } from './create-packs/create-packs.component';
 
 const routes: Routes = [
   {path:'', title:'Acceuil',component:AcceuilComponent},
@@ -78,17 +78,23 @@ const routes: Routes = [
       component:CreateGroupComponent
     }
   ]},
-  {path:'emp',redirectTo:'/emploi/consulter',pathMatch:'full'} , 
-  {path : 'salles', title: "Salles" ,component:SallesComponent} , 
-  {path :'admin', title: "Admin" ,component:AdminComponent} , 
-  {path:'ele',redirectTo:'/eleves/consulter',pathMatch:'full'}, 
+  {path:'emp',redirectTo:'/emploi/consulter',pathMatch:'full'} ,
+  {path : 'salles', title: "Salles" ,component:SallesComponent} ,
+  {path :'admin', title: "Admin" ,component:AdminComponent} ,
+  {path:'ele',redirectTo:'/eleves/consulter',pathMatch:'full'},
 
   {path:'paiel',redirectTo:'/paiment/eleve'},
   {path:'paien',redirectTo:'/paiment/enseignant'},
 
   {path:'packs',children:[
-    {path:'create',component:CreatePacksComponent},
-    {path:'consult',component:ConsultPacksComponent},
+    {
+      path:'consulter',
+      component:ConsultPacksComponent
+    },
+    {
+      path:'ajouter',
+      component:CreatePacksComponent
+    }
   ]},
 
 
