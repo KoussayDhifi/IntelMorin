@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
@@ -13,7 +13,7 @@ import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.componen
 import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 import { ConsultElevesComponent } from './consult-eleves/consult-eleves.component';
 import { CreateElevesComponent } from './create-eleves/create-eleves.component';
-
+import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
 
 import { CreatePacksComponent } from './create-packs/create-packs.component';
 import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
@@ -54,6 +54,15 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
     NavBarComponent,
     MatieresComponent,
     ProfCardComponent,
+
+
+   
+    ConsultGroupComponent,
+    CreateGroupComponent , 
+      
+
+
+
    
     ConsultGroupComponent,
     CreateGroupComponent , 
@@ -61,6 +70,7 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
 
 
    
+
     ConsultGroupComponent,
     CreateGroupComponent,
 
@@ -108,7 +118,8 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule , 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

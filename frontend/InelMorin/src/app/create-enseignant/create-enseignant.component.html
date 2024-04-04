@@ -24,7 +24,12 @@
                         <label for="Nom Lycée">Nom lycée : </label>
                         <input type="text" class="form-control" name="Nom Lycée" [(ngModel)]="NomLy" placeholder="Entrez le nom de lycée">
                         <label for="Matiere">Matière : </label>
-                        <input type="text" class="form-control" name="Matiere" [(ngModel)]="Matiere" placeholder="Entrez le nom de la matiere">
+                        <select name="Matiere" id="Matiere" class="form-select" [(ngModel)]="Matiere">
+                            <option value="Matiere" selected disabled="true">Ouvrir</option>
+                            <option value="Matiere">1</option>
+                            <option value="Matiere">2</option>
+                            <option value="Matiere">3</option>
+                        </select>
                         <input type="Submit" class="btn btn-primary offset-5 mt-4 " name="ButtonAjouter" value="Ajouter">
                 </form>
             </div>
