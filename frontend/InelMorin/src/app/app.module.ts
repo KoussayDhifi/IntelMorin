@@ -34,11 +34,12 @@ import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.com
 
 import { ConsultGroupComponent } from './consult-group/consult-group.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
+
 import { ConsultEnseignantComponent } from './consult-enseignant/consult-enseignant.component';
 import { CreateEnseignantComponent } from './create-enseignant/create-enseignant.component';
 import { TutorSlotComponent } from './consult-enseignant/tutor-slot/tutor-slot.component';
 import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.component';
-
+import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
 
 
 
@@ -54,11 +55,21 @@ import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.co
     MatieresComponent,
     ProfCardComponent,
 
+
    
     ConsultGroupComponent,
     CreateGroupComponent , 
       
 
+
+
+   
+    ConsultGroupComponent,
+    CreateGroupComponent , 
+   
+
+
+   
 
     ConsultGroupComponent,
     CreateGroupComponent,
