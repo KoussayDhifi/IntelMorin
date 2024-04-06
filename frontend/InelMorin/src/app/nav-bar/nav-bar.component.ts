@@ -25,10 +25,11 @@ export class NavBarComponent {
   toggleItems2(){
     (this.display2 == "display:none") ? this.display2 ="display:block;" : this.display2="display:none";
   }
-
-  toggleItems3() {
+  toggleItems3 () {
     (this.display3 == "display:none")? this.display3="display:block;" : this.display3="display:none";
+
   }
+
   toggleItems4() {
     (this.display4 == "display:none")? this.display4="display:block;" : this.display4="display:none";
   }
