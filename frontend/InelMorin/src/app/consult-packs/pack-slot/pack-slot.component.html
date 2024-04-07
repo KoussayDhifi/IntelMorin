@@ -1,0 +1,70 @@
+<div class="card p-1 offset-2">
+  <div class="card-image">
+    <img class="w-50" src="../../../assets/packs-slot.png" alt="packs-slot">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Pack : {{packName}}</h5>
+    <p class="card-text">Niveau :{{niveau}} annee</p>
+    <p class="card-text">Section : {{section}}</p>
+    <p class="card-text">Matieres : </p>
+    <p class="card-text" *ngFor="let item of matiere"> -   {{item}}</p>
+    <p class="card-text">Prix : {{prix}} DT</p>
+    <form action="#"[class]="display">
+
+      <div class="row">
+        <label class="form-label" id="n">Niveau : </label>
+        <select class="form-select"  id="n" aria-label="Default select example">
+          <option >Open</option>
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="s">Section :</label>
+        <select class="form-select"  id="niveau" aria-label="Default select example">
+          <option >Open</option>
+          <option value="Math" selected>Math</option>
+          <option value="Sciences">Sciences</option>
+          <option value="Informatique">Informatique</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="m">Matiere :</label>
+        <select class="form-select" id="m" aria-label="Default select example">
+          <option value="math">math</option>
+          <option value="sciences">sciences</option>
+          <option value="algorithmique">algorithmique</option>
+          <option value="physique">physique</option>
+        </select>
+      </div>
+      <div class="row">
+        <form [formGroup]="matiereForm">
+          <div formArrayName="matiereList">
+            <div *ngFor="let item of matiereListArray().controls;let i = index">
+              <label for="m">Matiere :</label>
+              <select class="form-select" id="m" aria-label="Default select example" formControlName="matiere">
+                <option value="math">math</option>
+                <option value="sciences">sciences</option>
+                <option value="algorithmique">algorithmique</option>
+                <option value="physique">physique</option>
+              </select>
+              <button class="delete-button" (click)="removeSubject(i)">-</button>
+              <button class="btn btn-info mt-2 " (click)="addSubject()">+</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="row">
+        <label for="l">Prix :</label>
+        <input type="text" id="l" class="form-control">
+      </div>
+    </form>
+  </div>
+  <div class="card-footer d-flex">
+    <button [class]="button" (click)="editSlot()">{{bValue}}</button>
+    <button class="btn btn-danger" (click)="deleteSlot()">Supprimer</button>
+  </div>
+</div>

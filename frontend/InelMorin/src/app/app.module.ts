@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
@@ -40,6 +40,7 @@ import { CreateEnseignantComponent } from './create-enseignant/create-enseignant
 import { TutorSlotComponent } from './consult-enseignant/tutor-slot/tutor-slot.component';
 import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.component';
 import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
+import { PackSlotComponent } from './consult-packs/pack-slot/pack-slot.component';
 
 
 
@@ -54,13 +55,13 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
     NavBarComponent,
     MatieresComponent,
     ProfCardComponent,
-   
+
     ConsultGroupComponent,
-    CreateGroupComponent , 
-   
+    CreateGroupComponent ,
 
 
-   
+
+
     ConsultGroupComponent,
     CreateGroupComponent,
 
@@ -95,12 +96,13 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
       CreateEnseignantComponent,
       TutorSlotComponent,
       ElevesSlotComponent,
-           
-
-        
+      PackSlotComponent,
 
 
-      
+
+
+
+
 
 
 
@@ -108,7 +110,8 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
