@@ -2,62 +2,30 @@
   <div class="InterfacePacks">
     <img src="../../assets/Packs.png" alt="PacksIcon" id="PacksIcon">
     <h1 style="font-family: Poppins;">Packs</h1>
-</div>
-<div class="container">
-  <div class="row1 d-flex align-items-center mt-5">
-    <label for="1" class="mr-3" (click)="toggleItems1()">Pack n°1</label>
-    <div class="toggleElm E" [style]=display1>
-      <p>Informatique</p>
-      <p>economique</p>
-      <p>gestion</p>
-      <p>Math</p>
+  </div>
+
+  <form action="" class="W-50 text-center">
+    <label for="rech" class="form-label">Rechercher par Section: </label>
+     <div class="input-group ">
+      <select class="form-select " aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <button class="input-group-text btn-success">Rechercher</button>
     </div>
-    <div class="Btn1">
-      <button type="button" style="font-family: Poppins;" class="btn btn-info mr-3 offset">480DT</button>
-        <button type="button" style="font-family: Poppins;" class="btn btn-danger mr-3 offset">Supprimer</button>
-        <button type="button" style="font-family: Poppins;" class="btn btn-primary">Editer</button>
+  </form>
+  <div class="row mt-5">
+    <div class="col-3">
+      <app-pack-slot packName="Pack 1" niveau="3" section="Sciences" prix="450" [matiere]="['Math', 'Physics', 'Chemistry','algorithmique']" (data)="getEditedElement($event)"></app-pack-slot>
+    </div>
+    <div class="col-3">
+      <app-pack-slot packName="Pack 2" niveau="4" section="Informatique" prix="300" [matiere]="['Math', 'Physics', 'algorithmique','STI']" (data)="getEditedElement($event)"></app-pack-slot>
+    </div>
+    <div class="col-3">
+      <app-pack-slot packName="Pack 3" niveau="4" section="Lettres" prix="350" [matiere]="['Arabe','Français','Anglais','phylosophie']" (data)="getEditedElement($event)"></app-pack-slot>
     </div>
   </div>
-<div class="row1 d-flex align-items-center mt-5">
-  <label for="1" class="mr-3" (click)="toggleItems2()">Pack n°2</label>
-  <div class="toggleElm E" [style]=display2>
-    <p>Informatique</p>
-    <p>Math</p>
-    <p>Physique</p>
-  </div>
-  <div class="Btn1">
-    <button type="button" style="font-family: Poppins;" class="btn btn-info mr-3 offset">205DT</button>
-      <button type="button" style="font-family: Poppins;" class="btn btn-danger mr-3 offset">Supprimer</button>
-      <button type="button" style="font-family: Poppins;" class="btn btn-primary">Editer</button>
-  </div>
-</div>
-<div class="row1 d-flex align-items-center mt-5">
-  <label for="1" class="mr-3" (click)="toggleItems3()">Pack n°3</label>
-  <div class="toggleElm E" [style]=display3>
-    <p>Informatique</p>
-    <p>Math</p>
-    <p>Physique</p>
-    <p>Science</p>
-  </div>
-  <div class="Btn1">
-    <button type="button" style="font-family: Poppins;" class="btn btn-info mr-3 offset">300DT</button>
-      <button type="button" style="font-family: Poppins;" class="btn btn-danger mr-3 offset">Supprimer</button>
-      <button type="button" style="font-family: Poppins;" class="btn btn-primary">Editer</button>
-  </div>
-</div>
-<div class="row1 d-flex align-items-center mt-5">
-  <label for="1" class="mr-3" (click)="toggleItems4()">Pack n°4</label>
-  <div class="toggleElm E" [style]=display4>
-    <p>Algorithmique</p>
-    <p>STI</p>
-    <p>Math</p>
-    <p>Physique</p>
-  </div>
-  <div class="Btn1">
-    <button type="button" style="font-family: Poppins;" class="btn btn-info mr-3 offset">205DT</button>
-      <button type="button" style="font-family: Poppins;" class="btn btn-danger mr-3 offset">Supprimer</button>
-      <button type="button" style="font-family: Poppins;" class="btn btn-primary">Editer</button>
-  </div>
-</div>
-</div>
+
 </div>

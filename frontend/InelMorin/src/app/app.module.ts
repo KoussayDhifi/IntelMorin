@@ -40,6 +40,7 @@ import { CreateEnseignantComponent } from './create-enseignant/create-enseignant
 import { TutorSlotComponent } from './consult-enseignant/tutor-slot/tutor-slot.component';
 import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.component';
 import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
+import { PackSlotComponent } from './consult-packs/pack-slot/pack-slot.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -100,8 +101,12 @@ import { ReactiveFormsModule } from '@angular/forms';
       CreateEnseignantComponent,
       TutorSlotComponent,
       ElevesSlotComponent,
+
+      PackSlotComponent,
+
       CreatePacksComponent,
       ConsultPacksComponent,
+
 
 
 

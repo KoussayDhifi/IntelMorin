@@ -1,0 +1,53 @@
+/* Apply Bootstrap styles to the select element */
+select  {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Apply Bootstrap styles to the select element when hovered */
+select :hover {
+  border-color: #adb5bd;
+}
+
+/* Apply Bootstrap styles to the select element when focused */
+select :focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Style for dropdown arrow */
+select :-ms-expand {
+  background-color: transparent;
+  border: none;
+}
+
+/* Apply Bootstrap styles to the select element when disabled */
+select :disabled {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+.delete-button {
+  border: none;
+  border-radius: 50%; /* Makes the button round */
+  width: 30px;
+  height: 30px;
+  background-color: red; /* Example background color */
+  color: white; /* Text color */
+  font-size: 20px;
+  cursor: pointer;
+  outline: none; /* Removes the button outline when focused */
+}
+
+.delete-button:hover {
+  background-color: darkred; /* Example background color on hover */
+}
