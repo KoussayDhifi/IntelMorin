@@ -13,10 +13,9 @@ import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.componen
 import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 import { ConsultElevesComponent } from './consult-eleves/consult-eleves.component';
 import { CreateElevesComponent } from './create-eleves/create-eleves.component';
+import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
 
 
-import { CreatePacksComponent } from './create-packs/create-packs.component';
-import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
 
 import { ScheduleSlotComponent } from './consult-emploi/schedule-slot/schedule-slot.component';
 import { StudentPaymentComponent } from './student-payment/student-payment.component';
@@ -30,7 +29,8 @@ import { GridPaymentComponent } from './tutor-payment/grid-payment/grid-payment.
 import { ConfigProfComponent } from './tutor-payment/config-prof/config-prof.component';
 import { CalcCentreComponent } from './tutor-payment/calc-centre/calc-centre.component';
 
-
+import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
+import { CreatePacksComponent } from './create-packs/create-packs.component';
 
 import { ConsultGroupComponent } from './consult-group/consult-group.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
@@ -42,6 +42,7 @@ import { ElevesSlotComponent } from './consult-eleves/eleves-slot/eleves-slot.co
 import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
 import { PackSlotComponent } from './consult-packs/pack-slot/pack-slot.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -56,14 +57,19 @@ import { PackSlotComponent } from './consult-packs/pack-slot/pack-slot.component
     MatieresComponent,
     ProfCardComponent,
 
+
+   
     ConsultGroupComponent,
-    CreateGroupComponent ,
+    CreateGroupComponent , 
+      
+
+
+
+   
 
 
 
 
-    ConsultGroupComponent,
-    CreateGroupComponent,
 
 
     AdminComponent,
@@ -75,8 +81,7 @@ import { PackSlotComponent } from './consult-packs/pack-slot/pack-slot.component
       ConsultElevesComponent,
       CreateElevesComponent,
 
-      CreatePacksComponent,
-      ConsultPacksComponent,
+
 
 
 
@@ -96,7 +101,11 @@ import { PackSlotComponent } from './consult-packs/pack-slot/pack-slot.component
       CreateEnseignantComponent,
       TutorSlotComponent,
       ElevesSlotComponent,
+
       PackSlotComponent,
+
+      CreatePacksComponent,
+      ConsultPacksComponent,
 
 
 
@@ -110,7 +119,9 @@ import { PackSlotComponent } from './consult-packs/pack-slot/pack-slot.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     FormsModule,
+
     ReactiveFormsModule
   ],
   providers: [],

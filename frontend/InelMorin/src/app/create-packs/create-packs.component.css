@@ -10,6 +10,13 @@
   height: 100px ;
   width: 120px;
 }
+.packs {
+  box-shadow: 12px 14px 3px -3px rgba(0,0,0,0.1);
+  padding: 50px;
+  width: 949px;
+  border-radius: 25px;
+  background-color: #FFF;
+}
 label{
   font-size: large;
   font-family: 'Poppins';
@@ -56,4 +63,10 @@ label{
     }
     #Btn1{
       font-family: 'Popins';
+    }
+
+    .matiere {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
