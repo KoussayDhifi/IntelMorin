@@ -1,4 +1,6 @@
-import { Component,OnInit} from '@angular/core';
+import { Component,OnInit, inject} from '@angular/core';
+import { FetchMatiereService } from './fetch-matiere.service';
+import { Matiere } from './Matiere';
 
 
 @Component({
@@ -8,19 +10,71 @@ import { Component,OnInit} from '@angular/core';
 })
 export class MatieresComponent implements OnInit{
    matiere :string="";
-   matiereArray :any[]= [];
+   public show = false;
+   public msg:any = "";
+   matiereArray : any[] | undefined;
+   private Matierefetcher = inject(FetchMatiereService);
 
 
-   ajout()
-   {
-    this.matiereArray.push(this.matiere);
+   ajout() {
+    let obj:Matiere = {
+      matiere:this.matiere
+    }
+    this.show = true;
 
-
-    console.log(this.matiereArray);
+    this.Matierefetcher.addMatiere(obj).subscribe (
+    (msg) => {
+      this.msg = msg;
+      console.log(msg)
+      this.affMat();
+    },
+    (err) => {
+      console.error(err);
+    }
+    );
+    this.show = false;
+    
    }
-   suprrimeMatiere(){}
+   
+   suprrimeMatiere(x:any){
+    let obj:any = {
+      matiere:x
+    }
+
+    this.show = true;
+
+    this.Matierefetcher.delMatiere(obj).subscribe(
+      (msg) => {
+        this.msg = msg;
+        console.log(msg)
+        this.affMat();
+      },
+      (err) => {
+        console.error(err);
+      }
+    );
+
+    this.show = false;
+
+   }
+
+   affMat() {
+    this.Matierefetcher.getMatiere().subscribe(
+      (data: any[]) => {
+        console.log(data)
+        this.matiereArray = data; 
+      },
+      (error) => {
+        console.error('Error fetching matieres:', error);
+      }
+    );
+    
+   }
+
 constructor(){}
 ngOnInit(): void {
+
+  this.affMat();
 
 }
 }
