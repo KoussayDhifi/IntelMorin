@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
@@ -13,7 +13,7 @@ import { ConsultEmploiComponent } from './consult-emploi/consult-emploi.componen
 import { CreateEmploiComponent } from './create-emploi/create-emploi.component';
 import { ConsultElevesComponent } from './consult-eleves/consult-eleves.component';
 import { CreateElevesComponent } from './create-eleves/create-eleves.component';
-import { ProfCardComponent } from './consult-group/prof-card/prof-card.component';
+
 
 
 
@@ -43,7 +43,7 @@ import { ProfCardComponent } from './consult-group/prof-card/prof-card.component
 import { PackSlotComponent } from './consult-packs/pack-slot/pack-slot.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -122,7 +122,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
     FormsModule,
 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -79,3 +79,7 @@ label
 {
   font-size: x-large;
 }
+
+.notshow {
+  display: none;
+}

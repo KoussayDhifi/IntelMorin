@@ -13,7 +13,12 @@
       </div>
       <div class="col">
       <input type="submit" value="Ajouter" class="btn btn-primary" (click)="ajout()">
+      
     </div>
+    <div class="spinner-border" [ngClass]="{'notshow':!show}" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    
     </div>
    </form>
 
@@ -24,9 +29,9 @@
 </div>
 <div class="row1 d-flex align-items-center mt-5" *ngFor="let item of matiereArray">
     <label for="1" class="mr-3">Matiere :</label>
-    <p class="number mr-3 mt-3" style="font-family: Poppins; font-size: larger;">{{item}}</p>
+    <p class="number mr-3 mt-3" style="font-family: Poppins; font-size: larger;">{{item.LABELSUBJ}}</p>
     <div class="Btn1">
-      <button type="button" style="font-family: Poppins;" class="btn btn-danger mr-3 offset-7" (click)="suprrimeMatiere()">Supprimer</button>
+      <button type="button" style="font-family: Poppins;" class="btn btn-danger mr-3 offset-7" (click)="suprrimeMatiere(item.ID_SUBJ)">Supprimer</button>
     </div>
 </div>
 
