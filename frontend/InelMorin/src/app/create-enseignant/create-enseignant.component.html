@@ -8,30 +8,23 @@
 
         <div class="row">
             <div class="col-5 offset-4">
-                <form class="was-validated">
+                <form class="was-validated" (submit)="insertProf()">
                         <label for="nom" class="form-label">Nom Prof : </label>
-                        <input type="text" class="form-control" name="nom" [(ngModel)]="nom" placeholder="Entrez le nom du prof">
+                        <input type="text" class="form-control" name="nom" [(ngModel)]="nom" placeholder="Entrez le nom du prof" required>
                         <label for="prenom" class="form-label" >Prenom Prof :</label>
-                        <input type="text" class="form-control" name="prenom" [(ngModel)]="prenom" placeholder="Entrez le prenom du prof">
-                        <label for="DateDeNaissance" class="form-label">Date de naissance Prof : </label>
-                        <input type="date" class="form-control" name="DateDeNaissance" [(ngModel)]="DateNP" placeholder="JJ - MM - AAAA ">
+                        <input type="text" class="form-control" name="prenom" [(ngModel)]="prenom" placeholder="Entrez le prenom du prof" required>
                         <label for="Telephone">Téléphone : </label>
-                        <input type="tel" class="form-control" pattern="[0-9]{2}[0-9]{3}[0-9]{3}" [(ngModel)]="Telephone" name="Telephone" placeholder="Entrez le numéro de téléphone">
-                        <label for="Email">Email : </label>
-                        <input type="email" class="form-control" name="Email" [(ngModel)]="Email" placeholder="example@email.com" required="true">
-                        <label for="Password">Mot de passe : </label>
-                        <input type="password" class="form-control" name="Password" [(ngModel)]="Password" placeholder="Entrez un mot de passe">
+                        <input type="tel" class="form-control" pattern="[0-9]{2}[0-9]{3}[0-9]{3}" [(ngModel)]="Telephone" name="Telephone" placeholder="Entrez le numéro de téléphone" required>
                         <label for="Nom Lycée">Nom lycée : </label>
-                        <input type="text" class="form-control" name="Nom Lycée" [(ngModel)]="NomLy" placeholder="Entrez le nom de lycée">
+                        <input type="text" class="form-control" name="Nom Lycée" [(ngModel)]="NomLy" placeholder="Entrez le nom de lycée" required>
                         <label for="Matiere">Matière : </label>
-                        <select name="Matiere" id="Matiere" class="form-select" [(ngModel)]="Matiere">
+                        <select name="Matiere" id="Matiere" class="form-select" [(ngModel)]="Matiere" required>
                             <option value="Matiere" selected disabled="true">Ouvrir</option>
-                            <option value="Matiere">1</option>
-                            <option value="Matiere">2</option>
-                            <option value="Matiere">3</option>
+                            <option *ngFor = "let mat of matieres" value="{{mat.ID_SUBJ}}">{{mat.LABELSUBJ}}</option>
                         </select>
                         <input type="Submit" class="btn btn-primary offset-5 mt-4 " name="ButtonAjouter" value="Ajouter">
                 </form>
+                <p class="offset-3">{{msg}}</p>
             </div>
         </div>
     </div>

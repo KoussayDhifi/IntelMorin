@@ -10,14 +10,22 @@ $tel = $data['telp'];
 $lycee = $data['lycee'];
 $mat = $data['mat'];
 
-$query = "INSERT INTO TUTOR(F_NAMET,L_NAMET,TEL,SCHOOL,SUBJ) VALUES('$nomp','$prenomp','$tel','$lycee','$mat');"
+$query = "SELECT * FROM TUTOR WHERE TEL='$tel'";
+$res =$conn->query($query);
 
-if ($conn->query($query) == TRUE) {
+if ($res->num_rows>0) {
+    http_response_code(202);
+    echo json_encode(array("msg"=>"Prof existe deja"));
+}else{
+
+$query = "INSERT INTO TUTOR(F_NAMET,L_NAMET,TEL,SCHOOL,SUBJ) VALUES('$nomp','$prenomp','$tel','$lycee','$mat')";
+
+if($conn->query($query) == TRUE) {
     http_response_code(201);
     echo json_encode(array("msg" => "Prof ajoute avec succees"));
 }else {
     http_response_code(400);
     echo json_encode(array("msg" => "Repeter une autre fois"));
 }
-
+}
 $conn->close();

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Output,EventEmitter } from '@angular/core';
-
+import { Input } from '@angular/core';
 
 
 @Component({
@@ -11,10 +11,17 @@ import { Output,EventEmitter } from '@angular/core';
 export class TutorSlotComponent {
   public disp:string = "display:none";
   public rotation:string = "";
+ 
+  @Input() nom:any;
+  @Input() prenom:any;
+  @Input() tel:any;
+  @Input() lycee:any;
+  @Input() mat:any;
 
   public expand:boolean | undefined;
 
   @Output() data = new EventEmitter();
+
 
 
   public button:string = "btn btn-primary mr-2";
@@ -44,5 +51,8 @@ export class TutorSlotComponent {
       console.log(obj);
     }
   }
+
+
+
 
 }

@@ -17,5 +17,7 @@
     </form>
 
 
-   <app-tutor-slot></app-tutor-slot>
+    <div *ngFor="let tutor of tutors">
+        <app-tutor-slot></app-tutor-slot>
+    </div>
 </div>
