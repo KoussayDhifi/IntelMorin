@@ -1,9 +1,9 @@
-<div class="container content w-100">
+<div class="container w-100">
     <div class="slot w-100 " style="border-bottom: 1px solid black ;">
         <div class="shown d-flex justify-content-between align-items-center">
             <div class="row align-items-center">
                 <div class="col">
-                    <h2>Mme Nofikha</h2>
+                    <h2>{{nom}} {{prenom}}</h2>
                 </div>
                
             </div>
@@ -13,12 +13,12 @@
             <div class="card move-left mb-3" style="width: 18rem;" [ngClass]="{wrapMenu:!expand}">
                
                 <div class="card-body">
-                    <h5 class="card-title text-center">Mme Nofikha</h5>
+                    <h5 class="card-title text-center">{{nom}} {{prenom}}</h5>
                 </div>
                 <ul class="list-group list-group-flush text-center">
-                    <li class="list-group-item">Identifiant du l'enseignant: 900251485</li>
-                    <li class="list-group-item">Nom Lycée: Lycée Jandouba </li>
-                    <li class="list-group-item">Tel: 54 233 009</li>
+                    <li class="list-group-item">Identifiant du l'enseignant: {{idProf}}</li>
+                    <li class="list-group-item">Nom Lycée: {{lycee}} </li>
+                    <li class="list-group-item">Tel: {{tel}}</li>
                 </ul>
                 <div class="card-body text-center"></div>
             </div>
@@ -28,13 +28,13 @@
                     <h5 class="card-title text-center">Matieres</h5>
                 </div>
                 <ul class="list-group list-group-flush text-center ">
-                    <li class="list-group-item">Matiere: Physique </li>
+                    <li class="list-group-item">Matiere: {{mat}} </li>
                    
                 </ul>
                 <div class="card-body text-center"></div>
             </div>
             <div class="offset-5 mb-3 "[ngClass]="{wrapMenu:!expand}"> 
-                <button class="btn btn-danger mt-1">Supprimer</button>
+                <button class="btn btn-danger mt-1" (click)="supprimerEns(idProf)">Supprimer</button>
                 <button class="btn btn-primary mt-1 " (click)="editSlot()" [class]="button">{{bValue}}</button>
             </div>
         </div>
