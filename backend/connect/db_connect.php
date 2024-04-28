@@ -1,4 +1,11 @@
 <?php
+
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Max-Age: 86400");
+
 define('DB_HOST', 'localhost:3307');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
@@ -11,5 +18,4 @@ if ($conn->connect_error) {
 }
 
 // Set headers to allow cross-origin requests (CORS)
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json");
+
