@@ -17,12 +17,12 @@ img:hover {
 }
 
 .slot {
-    max-height: max-content;
+    max-height: fit-content;
 }
 
 .expandMenu {
     animation-name: expand;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     height: 100%;
     overflow: hidden;
     display: block;

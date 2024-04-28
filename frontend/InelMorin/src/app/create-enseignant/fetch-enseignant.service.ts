@@ -21,8 +21,12 @@ export class FetchEnseignantService {
 
   }
 
-  consultEnseignantbyName(name:String) {
+  consultEnseignantbyName(name:any) {
+    return this.http.post(this.ROOT_URL+'/API/crudTutors/affTutorByName.php',name);
+  }
 
+  supprimerEnseignant(id:any) {
+    return this.http.post(this.ROOT_URL+'/API/crudTutors/delTutor.php',id);
   }
 
 }

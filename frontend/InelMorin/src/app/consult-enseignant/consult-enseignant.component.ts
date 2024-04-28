@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { FetchEnseignantService } from '../create-enseignant/fetch-enseignant.service';
-import { ChangeDetectorRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-consult-enseignant',
@@ -9,9 +9,12 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 export class ConsultEnseignantComponent implements OnInit{
 
+  public nomprenom = "";
+  public idProf:any | undefined;
+  
   public tutors:any[] = [];
   
-  constructor (private fens:FetchEnseignantService, private cdr: ChangeDetectorRef) {
+  constructor (private fens:FetchEnseignantService) {
 
   }
 
@@ -24,8 +27,13 @@ export class ConsultEnseignantComponent implements OnInit{
   affTutor ():any {
     this.fens.consultEnseignant().subscribe (
       (data:any) => {
-        this.tutors = data;
-        this.cdr.detectChanges();
+        try {
+          this.tutors.length = 0;
+        for (let i = 0; i<data[0].length; i++) {
+          this.tutors.push(data[0][i]);
+        }}catch (e) {
+          this.tutors.length = 0;
+        }
       },
       (err:any) => {
         console.error(err);
@@ -33,6 +41,52 @@ export class ConsultEnseignantComponent implements OnInit{
     )
   }
 
+  affByName () {
+    let n = this.nomprenom.split(' ');
+    if (n.length>1) {
+    var obj = {
+      nom:n[0],
+      prenom:n[1]
+    }
+    }else {
+      var obj = {
+        nom:this.nomprenom,
+        prenom:this.nomprenom
+      }
+    }
+    this.fens.consultEnseignantbyName(obj).subscribe(
+      (data:any) => {
+        this.tutors.length = 0;
+        for (let i = 0; i<data[0].length; i++) {
+          this.tutors.push(data[0][i]);
+        }
+      },
+      (err:any) => {
+        console.error(err);
+      }
+    )
+  }
+
+  getData ($event:any) {
+    this.idProf = $event;
+    this.supprimerEns(this.idProf);
+  }
+
+  supprimerEns (id:any) {
+    let idobj = {
+      id_prof:id
+    }
+
+    this.fens.supprimerEnseignant(idobj).subscribe (
+      (data:any) => {
+        console.log(data);
+        this.affTutor();
+      },
+      (err:any) => {
+        console.error(err);
+      }
+    )
+  }
 
 
 }

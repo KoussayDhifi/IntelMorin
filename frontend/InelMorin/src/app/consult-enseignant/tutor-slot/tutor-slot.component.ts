@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Output,EventEmitter } from '@angular/core';
 import { Input } from '@angular/core';
-
+import { FetchEnseignantService } from '../../create-enseignant/fetch-enseignant.service';
 
 @Component({
   selector: 'app-tutor-slot',
@@ -11,13 +11,19 @@ import { Input } from '@angular/core';
 export class TutorSlotComponent {
   public disp:string = "display:none";
   public rotation:string = "";
+
+  constructor (private fens:FetchEnseignantService) {}
  
+  @Input() idProf:any;
   @Input() nom:any;
   @Input() prenom:any;
   @Input() tel:any;
   @Input() lycee:any;
   @Input() mat:any;
-
+  @Input() idmat:any;
+  @Input() callbackAff = () => {
+    return 0;
+  }
   public expand:boolean | undefined;
 
   @Output() data = new EventEmitter();
@@ -50,6 +56,14 @@ export class TutorSlotComponent {
       }
       console.log(obj);
     }
+  }
+
+  supprimerEns (id:any) {
+    let idobj = {
+      id_prof:id
+    }
+
+    this.data.emit(id);
   }
 
 
