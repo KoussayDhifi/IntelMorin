@@ -7,3 +7,36 @@
     display: flex;
    
 }
+.expandMenu {
+    animation-name: expand;
+    animation-duration: 1s;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.wrapMenu {
+    animation: wrapM 1s;
+    overflow-y: hidden;
+   display: none;
+}
+
+@keyframes wrapM {
+    from {
+        height: 100%;
+        display: block;
+    }
+    to {
+        height: 0vh;
+        display: none;
+    }
+}
+
+@keyframes expand {
+    from {
+        height: 0vh;
+    }
+    to {
+        height: 100%;
+    }
+}

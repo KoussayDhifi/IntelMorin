@@ -44,6 +44,7 @@ import { PackSlotComponent } from './consult-packs/pack-slot/pack-slot.component
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -106,6 +107,7 @@ import { HttpClientModule } from '@angular/common/http';
 
       CreatePacksComponent,
       ConsultPacksComponent,
+      LoginComponent,
 
 
 

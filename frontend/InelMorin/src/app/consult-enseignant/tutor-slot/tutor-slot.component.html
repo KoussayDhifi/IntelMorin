@@ -1,5 +1,5 @@
 <div class="container w-100">
-    <div class="slot w-100 " style="border-bottom: 1px solid black ;">
+    <div class="slot w-100 " style="border-bottom: 1px solid black ;" >
         <div class="shown d-flex justify-content-between align-items-center">
             <div class="row align-items-center">
                 <div class="col">
@@ -9,9 +9,11 @@
             </div>
             <img src="../../../assets/Fleche.png" alt="Fleche" (click)="toggleGrid()" [ngClass]="{expandArrow:expand, wrapArrow:!expand && expand !== undefined}" class="mt-3">
         </div>
-        <div class="card-container">
-            <div class="card move-left mb-3" style="width: 18rem;" [ngClass]="{wrapMenu:!expand}">
-               
+        <div class="card-container" [ngClass]="{wrapMenu:!expand, expandMenu:expand}">
+            <div class="d-flex justify-content-between">
+            
+            <div class="card move-left mb-3" style="width: 18rem;" [ngClass]="{wrapMenu:!expand, expandMenu:expand}">
+               <div class="" [ngClass]="{edit:bValue!='Editer'}">
                 <div class="card-body">
                     <h5 class="card-title text-center">{{nom}} {{prenom}}</h5>
                 </div>
@@ -20,23 +22,44 @@
                     <li class="list-group-item">Nom Lycée: {{lycee}} </li>
                     <li class="list-group-item">Tel: {{tel}}</li>
                 </ul>
+             </div>
                 <div class="card-body text-center"></div>
+                <div [ngClass]="{edit:bValue=='Editer'}">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" [(ngModel)]="nom" class="form-control">
+                <label for="nom">Prenom:</label>
+                <input type="text" id="prenom" name="prenom" [(ngModel)]="prenom" class="form-control">
+                <label for="lycee">Lycee:</label>
+                <input type="text" id="lycee" name="lycee" [(ngModel)]="lycee" class="form-control">
+                <label for="tel">Tel</label>
+                <input type="text" id="tel" name="tel" [(ngModel)]="tel" class="form-control">
             </div>
-            <div class="card move-left mb-3" style="width: 18rem;" [ngClass]="{wrapMenu:!expand}">
+            </div>
+            <div class="card move-left mb-3" style="width: 18rem;" [ngClass]="{wrapMenu:!expand, expandMenu:expand}">
                 
                 <div class="card-body">
                     <h5 class="card-title text-center">Matieres</h5>
                 </div>
                 <ul class="list-group list-group-flush text-center ">
+                    <div [ngClass] = "{edit:bValue!='Editer'}">
                     <li class="list-group-item">Matiere: {{mat}} </li>
-                   
+                    </div>
+                    <div [ngClass] = "{edit:bValue=='Editer'}">
+                    <label for="matiere">Matiere:</label><br>
+                    <select name="matiere" [(ngModel)] = "idmat" id="matiere">
+                        <option *ngFor="let mat of matiere" [value]="mat.ID_SUBJ" [selected]="idmat == mat.ID_SUBJ">{{mat.LABELSUBJ}}</option>
+                    </select>
+                </div>
                 </ul>
                 <div class="card-body text-center"></div>
             </div>
-            <div class="offset-5 mb-3 "[ngClass]="{wrapMenu:!expand}"> 
+        </div> 
+            <div class="offset-5 mb-3 "[ngClass]="{wrapMenu:!expand, expandMenu:expand}"> 
                 <button class="btn btn-danger mt-1" (click)="supprimerEns(idProf)">Supprimer</button>
                 <button class="btn btn-primary mt-1 " (click)="editSlot()" [class]="button">{{bValue}}</button>
             </div>
+
+            
         </div>
     </div>
 </div>
