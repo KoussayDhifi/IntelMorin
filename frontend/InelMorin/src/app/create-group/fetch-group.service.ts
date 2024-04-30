@@ -14,6 +14,9 @@ export class FetchGroupService {
     return this.http.post(this.ROOT_URL+'/API/crudGroupes/insertGroup.php',group);
   }
 
+  selectGroup () {
+    return this.http.get(this.ROOT_URL+'/API/crudGroupes/selectGroup.php');
+  }
 
 
 }
