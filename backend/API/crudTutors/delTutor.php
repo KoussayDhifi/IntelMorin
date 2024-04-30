@@ -7,7 +7,7 @@ $data = json_decode(file_get_contents('php://input'),true);
 $idP = $data['id_prof'];
 
 
-$query = "DELETE FROM TUTOR WHERE ID_TUTOR='$idP'"
+$query = "DELETE FROM TUTOR WHERE ID_TUTOR='$idP'";
 
 if ($conn->query($query) == TRUE) {
     http_response_code(200);

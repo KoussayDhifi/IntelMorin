@@ -6,7 +6,7 @@ header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Max-Age: 86400");
 
-define('DB_HOST', 'localhost:3307');
+define('DB_HOST', 'localhost:3300');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'intelmorin');

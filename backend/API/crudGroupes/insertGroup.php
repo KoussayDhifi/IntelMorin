@@ -8,7 +8,7 @@ $prof = $data['id_tut'];
 $labelGroup = $data['group'];
 
 
-$req = 'INSERT INTO GROUPE(ID_TUT,LABELGROUPE) VALUES('$prof','$labelGroup');';
+$req = "INSERT INTO GROUPE(ID_TU,LABELGROUPE) VALUES('$prof','$labelGroup');";
 
 
 if ($conn->query($req) == TRUE) {
