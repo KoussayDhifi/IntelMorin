@@ -11,6 +11,7 @@ export class ConsultEnseignantComponent implements OnInit{
 
   public nomprenom = "";
   public idProf:any | undefined;
+  public expand:boolean | undefined;
   
   public tutors:any[] = [];
   
@@ -22,6 +23,18 @@ export class ConsultEnseignantComponent implements OnInit{
   ngOnInit():void {
     this.affTutor()
     console.log(this.tutors);
+  }
+
+
+  editProf ($event:any) {
+    this.fens.updateEnseignant($event).subscribe (
+      (data:any) => {
+        console.log(data);
+      },(err:any) => {
+        console.log(err);
+      }
+    );
+    this.affTutor();
   }
 
   affTutor ():any {
@@ -86,6 +99,15 @@ export class ConsultEnseignantComponent implements OnInit{
         console.error(err);
       }
     )
+  }
+
+  toggleGrid () {
+    if (this.expand == undefined) {
+      this.expand = false;
+    }
+    this.expand = !this.expand;
+
+    
   }
 
 

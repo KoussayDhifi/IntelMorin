@@ -6,39 +6,24 @@
 
 <div class="container offset-3">
     <form action="#" class="was-validated">
-        <div class="row">
-            <div class="col-2">
-                <label for="id" class="form-label">Identifiant du groupe: </label>
-                <input type="text" class="form-control" id="id" required="true" placeholder="l'identifiant ">
-            </div>
-            <div class="col-5">
-                <label for= "niv" class="form-label">Niveau du groupe</label>
-                <input type="text" class="form-control" id="niv" placeholder="1ére/2ème/3ème/BAC">
-            </div>
-        </div>
+        {{msg}}
         <div class="row">
             <div class="col-2 mt-2">
                 <label for="idP" class="form-label">L'enseignant: </label>
-                <select class="form-select" id="ProfE" aria-label="Prof" formControlName="Prof">
-                    <option selected>Open </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                {{id_tut}}
+                <select class="form-select" id="ProfE" aria-label="Prof" formControlName="Prof" name="id_tut" [(ngModel)]="id_tut">
+                    <option disabled selected>Open </option>
+                    <option *ngFor="let tutor of tutors[0]" [value]="tutor.ID_TUTOR">{{tutor.F_NAMET}} {{tutor.L_NAMET}}</option>
                   </select>
             </div>
             <div class="col-5 mt-2">
                 <label for="NomG" class="form-label">Nom du groupe: </label>
-                <select class="form-select" id="Groupes" aria-label="Groupes" formControlName="Groupes">
-                    <option selected>Open </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+                <input type="text" class="form-control" name="nomGroupe" [(ngModel)]="nomGroup"> 
             </div>
         </div>
         <div class="row">
             <div class="col mt-3 offset-3 ">
-                <button type="submit" class="btn btn-primary  d-grid">Ajouter</button>
+                <button type="submit" class="btn btn-primary  d-grid" (click)="createGroup()">Ajouter</button>
             </div>
         </div>
         

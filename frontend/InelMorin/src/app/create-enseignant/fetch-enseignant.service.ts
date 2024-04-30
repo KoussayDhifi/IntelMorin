@@ -29,4 +29,8 @@ export class FetchEnseignantService {
     return this.http.post(this.ROOT_URL+'/API/crudTutors/delTutor.php',id);
   }
 
+  updateEnseignant(obj:any) {
+    return this.http.post(this.ROOT_URL+'/API/crudTutors/updateTutor.php',obj);
+  }
+
 }

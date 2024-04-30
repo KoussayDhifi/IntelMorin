@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FetchEnseignantService } from '../create-enseignant/fetch-enseignant.service';
 
 @Component({
   selector: 'app-create-eleves',
@@ -18,14 +19,31 @@ export class CreateElevesComponent implements OnInit {
   Section: string = '';
   Niveau: string = '';
 
+
   studentForm: FormGroup = new FormGroup({
     studentList: new FormArray([])
   });
 
-  constructor() {}
+  tutors:any[] = []
+  
+  constructor(private fens:FetchEnseignantService) {}
 
   ngOnInit(): void {
     this.addStudent(); // Add an initial student field when the component initializes
+    this.getTutors();
+  }
+
+
+
+  getTutors() {
+    this.fens.consultEnseignant().subscribe (
+      (data:any) => {
+        this.tutors = data;
+        console.log(data);
+      }, (err:any) => {
+        console.error(err);
+      }
+    )
   }
 
   getStudentFields(): FormGroup {
@@ -50,6 +68,6 @@ export class CreateElevesComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.studentForm.value);
+    
   }
 }

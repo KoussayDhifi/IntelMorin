@@ -2,11 +2,16 @@
     <img src="../../assets/logo.png" alt="Logo_IntelMorin" class="logo">
     <div class="info">
         <div class="name">
-            <p>{{admin.name}} {{admin.lastname}}</p>
         </div>
         <div class="icons">
         <img src="../../assets/AdminIcon.png" alt="AdminLogo" class="adminLogo icon">
-        <img src="../../assets/Fleche.png" alt="arrow" class="icon">
+        <div class="btn-group dropleft">
+        <img src="../../assets/Fleche.png" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="arrow" class="icon">
+
+        <div class="dropdown-menu">
+            <a class="dropdown-item" (click)="logout()">Logout</a>
+          </div>
+        </div>
         </div>
     </div>
 </nav>

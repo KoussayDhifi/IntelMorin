@@ -21,10 +21,13 @@ import { ConsultEnseignantComponent } from './consult-enseignant/consult-enseign
 import { CreateEnseignantComponent } from './create-enseignant/create-enseignant.component'
 import { ConsultPacksComponent } from './consult-packs/consult-packs.component';
 import { CreatePacksComponent } from './create-packs/create-packs.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+import { UnauthenticatedGuard } from './unauthenticated.guard';
 
 const routes: Routes = [
-  {path:'', title:'Acceuil',component:AcceuilComponent},
-  {path:'matieres', title:'Matieres',component:MatieresComponent} ,
+  {path:'', title:'Acceuil',component:AcceuilComponent,canActivate:[AuthGuard]},
+  {path:'matieres', title:'Matieres',component:MatieresComponent,canActivate:[AuthGuard]} ,
   {path: 'eleves',children:[
     {
       path:'consulter' ,
@@ -34,7 +37,7 @@ const routes: Routes = [
       path:'ajouter' ,
       component:CreateElevesComponent
     } ,
-]},
+],canActivate:[AuthGuard]},
 {path: 'enseignants',children:[
   {
     path:'consulter' ,
@@ -44,7 +47,7 @@ const routes: Routes = [
     path:'ajouter' ,
     component:CreateEnseignantComponent
   } ,
-]},
+],canActivate:[AuthGuard]},
   {path:'emploi',children:[
     {
       path:'consulter',
@@ -54,7 +57,7 @@ const routes: Routes = [
       path:'ajouter',
       component:CreateEmploiComponent
     }
-  ]},
+  ],canActivate:[AuthGuard]},
 
   {
     path:'paiment',children:[
@@ -66,7 +69,7 @@ const routes: Routes = [
         path:'enseignant',
         component:TutorPaymentComponent
       }
-    ]
+    ],canActivate:[AuthGuard]
   },
   {path:'groupes',children:[
     {
@@ -77,10 +80,10 @@ const routes: Routes = [
       path:'ajouter',
       component:CreateGroupComponent
     }
-  ]},
+  ],canActivate:[AuthGuard]},
   {path:'emp',redirectTo:'/emploi/consulter',pathMatch:'full'} ,
-  {path : 'salles', title: "Salles" ,component:SallesComponent} ,
-  {path :'admin', title: "Admin" ,component:AdminComponent} ,
+  {path : 'salles', title: "Salles" ,component:SallesComponent, canActivate:[AuthGuard]} ,
+  {path :'admin', title: "Admin" ,component:AdminComponent,canActivate:[AuthGuard]} ,
   {path:'ele',redirectTo:'/eleves/consulter',pathMatch:'full'},
 
   {path:'paiel',redirectTo:'/paiment/eleve'},
@@ -95,7 +98,8 @@ const routes: Routes = [
       path:'ajouter',
       component:CreatePacksComponent
     }
-  ]},
+  ],canActivate:[AuthGuard]},
+  {path:'login',component:LoginComponent,canActivate: [UnauthenticatedGuard]}
 
 
 ];

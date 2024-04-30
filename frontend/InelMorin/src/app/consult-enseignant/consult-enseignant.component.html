@@ -18,6 +18,6 @@
 
 
     <div *ngFor="let tutor of tutors">
-        <app-tutor-slot (data)="getData($event)" [callbackAff]="affTutor" [nom]="tutor.F_NAMET" [prenom]="tutor.L_NAMET" [idProf]="tutor.ID_TUTOR" [lycee]="tutor.SCHOOL" [mat]="tutor.LABELSUBJ" [tel]="tutor.TEL" [idmat]="tutor.SUBJ"></app-tutor-slot>
+        <app-tutor-slot [ngClass]="{'expandMenu':expand,wrapMenu:!expand && expand !== undefined}" (prof)="editProf($event)" (data)="getData($event)" [callbackAff]="affTutor" [nom]="tutor.F_NAMET" [prenom]="tutor.L_NAMET" [idProf]="tutor.ID_TUTOR" [lycee]="tutor.SCHOOL" [mat]="tutor.LABELSUBJ" [tel]="tutor.TEL" [idmat]="tutor.SUBJ"></app-tutor-slot>
     </div>
 </div>

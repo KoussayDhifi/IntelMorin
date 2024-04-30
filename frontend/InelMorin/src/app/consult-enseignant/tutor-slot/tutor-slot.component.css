@@ -7,13 +7,17 @@ img:hover {
     cursor: pointer;
 }
 
+.edit {
+    display: none;
+}
+
 .show {
     display: none;
 }
 
 .shown {
     width: 60vw;
-    overflow: show;
+    
 }
 
 .slot {
@@ -24,13 +28,12 @@ img:hover {
     animation-name: expand;
     animation-duration: 0.5s;
     height: 100%;
-    overflow: hidden;
     display: block;
 }
 
 .wrapMenu {
     animation: wrapM 1s;
-    overflow-y: hidden;
+    
    display: none;
 }
 
@@ -50,9 +53,11 @@ img:hover {
 @keyframes expand {
     from {
         height: 0%;
+        display: none;
     }
     to {
         height: 100%;
+        display: block;
     }
 }
 
@@ -84,6 +89,7 @@ img:hover {
         display: none;
     }
 }
+/*
 #circular-img {
     border-radius: 50%;
     width: 100px; 
@@ -129,6 +135,7 @@ img:hover {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+*/
 
 .card {
     flex-basis: calc(50% - 1rem); 
@@ -141,8 +148,10 @@ img:hover {
     transition: all 0.3s ease; 
 }
 
+
 .card:hover {
     transform: translateY(-3px); 
     box-shadow: 0 0.5rem 1.5rem rgba(228, 26, 26, 0.534); 
 }
+
 
