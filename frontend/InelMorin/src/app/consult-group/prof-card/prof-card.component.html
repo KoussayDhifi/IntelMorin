@@ -1,5 +1,5 @@
-<div class="container content w-100">
-    <div class="slot w-100 ">
+<div class="container content w-70">
+    <div class="slot w-60 ">
         <div class="shown d-flex justify-content-between">
             <h2>Groupe 1 </h2>
             <img src="../../../assets/Fleche.png" alt="Fleche" (click) = "toggleGrid()" [ngClass]="{expandArrow:expand,wrapArrow:!expand && expand !== undefined}">
@@ -8,12 +8,12 @@
                 <div class="card" style="width: 18rem;" [ngClass]="{wrapMenu:!expand}">
                     <img src="../../../assets/Teacher.png" class="card-img-top" id="circular-img">
                     <div class="card-body">
-                      <h5 class="card-title text-center">Monji Rahwi</h5>
+                      <h5 class="card-title text-center">{{nomProf}}{{prenProf}}</h5>
                     </div>
                     <ul class="list-group list-group-flush text-center">
                       <li class="list-group-item">Identifiant du Groupe: {{idG}}</li>
                       <li class="list-group-item">Nom du groupe: {{NomG}}</li>
-                      <li class="list-group-item">Nombre des élèves: {{NbrE}}</li>
+                      
                     </ul>
                     <div class="card-body text-center">
                         <button class="btn btn-danger " (click)="deleteSlot()">Supprimer</button>

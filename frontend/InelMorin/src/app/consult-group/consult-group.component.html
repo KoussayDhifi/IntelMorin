@@ -16,8 +16,8 @@
     </form>
 
 
-
-    <app-prof-card></app-prof-card>
-
+    <div *ngFor="let group of groups">
+        <app-prof-card [nomProf]="group.F_NAMET" [prenProf]="group.L_NAMET" [idG]="group.ID_GROUP" [NomG]="group.labelgroupe"></app-prof-card>
+    </div>
 
 </div>

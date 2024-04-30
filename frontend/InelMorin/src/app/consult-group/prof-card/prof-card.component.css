@@ -7,12 +7,16 @@ img:hover {
     cursor: pointer;
 }
 
+.content {
+    height: 100%;
+}
+
 .show {
     display: none;
 }
 
 .shown {
-    width: 75vw;
+    width: 60vw;
     overflow: show;
 }
 

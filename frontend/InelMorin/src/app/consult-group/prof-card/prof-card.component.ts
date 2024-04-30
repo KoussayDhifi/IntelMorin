@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-prof-card',
@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './prof-card.component.css'
 })
 export class ProfCardComponent {
-  public idG : any ; 
-  public NomG : any ; 
-  public NbrE : any ; 
+  @Input() nomProf:any;
+  @Input() prenProf:any;
+  @Input() idG : any ; 
+  @Input() NomG : any ; 
+  
 
 
 
