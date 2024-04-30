@@ -2,7 +2,7 @@
 
 require_once '../../connect/db_connect.php';
 
-$query = "SELECT * FROM TUTOR;";
+$query = "SELECT ID_TUTOR,F_NAMET,L_NAMET,TEL,SCHOOL,SUBJ,LABELSUBJ FROM TUTOR,SUBJECT WHERE SUBJ = ID_SUBJ;";
 
 $res = $conn->query($query);
 
