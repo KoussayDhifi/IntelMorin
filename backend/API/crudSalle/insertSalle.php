@@ -1,6 +1,6 @@
 <?php
 
-require_once '../connect/db_connect.php';
+require_once '../../connect/db_connect.php';
 
 $data = json_decode(file_get_contents('php://input'),true);
 
@@ -9,7 +9,7 @@ $quer = "SELECT * FROM CLASSROOM WHERE LABELCLASS='$labelSalle'";
 $res = $conn->query($quer);
 
 if ($res->num_rows > 0) {
-    http_response_code(409);
+    http_response_code(200);
     echo json_encode(array('msg'=>'La salle existe deja'));
 }else{
 

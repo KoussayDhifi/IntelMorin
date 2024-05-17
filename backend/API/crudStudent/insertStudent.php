@@ -9,8 +9,6 @@ $prenom = $data['prenom'];
 $date = $data['date'];
 $tel = $data['tel'];
 $telp = $data['telp'];
-$lycee = $data['lycee'];
-$level = $data['niveaux'];
 $tutors = $data['tutors'];
 
 
@@ -23,7 +21,7 @@ if ($res->num_rows > 0) {
 }else{
 
 $dateMySQLFormat = date('Y-m-d', strtotime(str_replace('/', '-', $date)));
-$query = "INSERT INTO STUDENT (F_NAMES,L_NAMES,BIRTHDATES,TELS,TELPARENT,LEVELS,SCHOOLS) VALUES ('$nom','$prenom','$dateMySQLFormat','$tel','$telp','$level','$lycee');";
+$query = "INSERT INTO STUDENT (F_NAMES,L_NAMES,BIRTHDATES,TELS,TELPARENT) VALUES ('$nom','$prenom','$dateMySQLFormat','$tel','$telp');";
 
 
 if ($conn->query($query) == TRUE) {

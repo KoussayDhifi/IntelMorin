@@ -24,9 +24,11 @@ import { CreatePacksComponent } from './create-packs/create-packs.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
 import { UnauthenticatedGuard } from './unauthenticated.guard';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
   {path:'', title:'Acceuil',component:AcceuilComponent,canActivate:[AuthGuard]},
+  {path:'aboutus', title:'AboutUs',component:AboutUsComponent},
   {path:'matieres', title:'Matieres',component:MatieresComponent,canActivate:[AuthGuard]} ,
   {path: 'eleves',children:[
     {

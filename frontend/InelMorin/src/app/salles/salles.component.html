@@ -6,33 +6,27 @@
 <div class="content">
     <div class="container">
         <div class="salle offset-1">
+            
             <div class="row">
                 <div class="col">
+                    <p>{{msg}}</p>
                     <label for="salle">Nom du Salle :</label>
-                    <input type="text" class="form-control col-5" id="salle">
+                    <input type="text" class="form-control col-5" id="salle" [(ngModel)]="nsalles">
                 </div>
             </div>        
             <div class="col">
                 <div class="Buttons">
-                    <button type="button" class="btn btn-success offset-9" id="Btn">Ajouter</button>
+                    <button type="button" class="btn btn-success offset-9" id="Btn" (click)="ajouterSalle()">Ajouter</button>
                 </div>
             </div>
         </div>
-        <div class="row1 d-flex align-items-center mt-5">
+        <div class="row1 d-flex align-items-center mt-5" *ngFor = "let salle of salles">
             <label for="1" class="mr-3">Nom du salle:</label>
-            <p class="number mr-3 mt-3" style="font-family: Poppins; font-size: larger; color: blue;">{{nsalles}}</p>
+            <p class="number mr-3 mt-3" style="font-family: Poppins; font-size: larger; color: blue;">{{salle.LABELCLASS}}</p>
             <div class="Btn1">    
-                <button type="button" style="font-family: Poppins;" class="btn btn-danger mr-3 offset-7">Supprimer</button>
-                <button type="button" style="font-family: Poppins;" class="btn btn-primary">Editer</button>
+                <button type="button" style="font-family: Poppins;" class="btn btn-danger mr-3 offset-7" (click)="delSalle(salle.ID_CLASSROOM)">Supprimer</button>
             </div>
         </div>
         
-        <div class="row1 d-flex align-items-center mt-5">
-            <label for="1" class="mr-3">Nom du salle:</label>
-            <p class="number mr-3 mt-3" style="font-family: Poppins; font-size: larger; color: blue;">{{nsalles}}</p>
-            <div class="Btn1">
-                <button type="button" style="font-family: Poppins;" class="btn btn-danger mr-3 offset-7">Supprimer</button>
-                <button type="button" style="font-family: Poppins;" class="btn btn-primary">Editer</button>
-            </div>
-        </div>
+        
 </div>
