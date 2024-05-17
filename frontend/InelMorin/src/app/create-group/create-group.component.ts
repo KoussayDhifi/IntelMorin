@@ -21,6 +21,11 @@ export class CreateGroupComponent {
     this.getTutors();
   }
 
+  setidTut (x:any) {
+    this.id_tut = x.value;
+    console.log(this.id_tut);
+  }
+
   getTutors() {
     this.fens.consultEnseignant().subscribe (
       (data:any) => {

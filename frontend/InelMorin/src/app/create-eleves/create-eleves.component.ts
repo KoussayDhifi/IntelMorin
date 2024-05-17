@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { FetchEnseignantService } from '../create-enseignant/fetch-enseignant.service';
+import { FetchGroupService } from '../create-group/fetch-group.service';
+import { CreateStudentService } from './create-student.service';
 
 @Component({
   selector: 'app-create-eleves',
@@ -8,16 +10,11 @@ import { FetchEnseignantService } from '../create-enseignant/fetch-enseignant.se
   styleUrls: ['../../../node_modules/bootstrap/dist/css/bootstrap.min.css','./create-eleves.component.css']
 })
 export class CreateElevesComponent implements OnInit {
-  nom: string = '';
-  prenom: string = '';
-  DateNE: any = '';
-  TelephoneE: any = '';
-  TelephoneP: any = '';
-  MailE: any = '';
-  Password: any = '';
-  NomLy: string = '';
-  Section: string = '';
-  Niveau: string = '';
+  public nom: string = '';
+  public prenom: string = '';
+  public DateNE: any = '';
+  public TelephoneE: any = '';
+  public TelephoneP: any = '';
 
 
   studentForm: FormGroup = new FormGroup({
@@ -25,15 +22,27 @@ export class CreateElevesComponent implements OnInit {
   });
 
   tutors:any[] = []
+  groups:any[] = []
   
-  constructor(private fens:FetchEnseignantService) {}
+  constructor(private fens:FetchEnseignantService, private fgroup:FetchGroupService, private fstud:CreateStudentService) {}
 
   ngOnInit(): void {
     this.addStudent(); // Add an initial student field when the component initializes
     this.getTutors();
+    this.getGroups();
   }
 
 
+  getGroups() {
+    this.fgroup.selectGroup().subscribe(
+      (data:any) => {
+        this.groups = data;
+      }, (err:any) => {
+        console.error(err);
+
+      }
+    )
+  }
 
   getTutors() {
     this.fens.consultEnseignant().subscribe (
@@ -66,8 +75,25 @@ export class CreateElevesComponent implements OnInit {
   removeStudent(i: number) {
     this.studentListArray().removeAt(i);
   }
-
+  
   onSubmit() {
-    
+    let obj  = {
+      nom: this.nom,
+      prenom:this.prenom,
+      date:this.DateNE,
+      tel:this.TelephoneE,
+      telp:this.TelephoneP, 
+      tutors:this.studentListArray
+
+    }
+
+    this.fstud.insertStudent(obj).subscribe (
+      (data:any) => {
+        console.log(data);
+      },
+      (err:any) => {
+        console.error(err);
+      }
+    )
   }
 }

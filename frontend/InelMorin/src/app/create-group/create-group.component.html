@@ -10,8 +10,8 @@
         <div class="row">
             <div class="col-2 mt-2">
                 <label for="idP" class="form-label">L'enseignant: </label>
-                {{id_tut}}
-                <select class="form-select" id="ProfE" aria-label="Prof" formControlName="Prof" name="id_tut" [(ngModel)]="id_tut">
+                
+                <select class="form-select" id="ProfE" aria-label="Prof" formControlName="Prof" (change)="setidTut($event.target)">
                     <option disabled selected>Open </option>
                     <option *ngFor="let tutor of tutors[0]" [value]="tutor.ID_TUTOR">{{tutor.F_NAMET}} {{tutor.L_NAMET}}</option>
                   </select>

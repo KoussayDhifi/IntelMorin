@@ -6,5 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CreateStudentService {
 
-  constructor() { }
+  readonly ROOT_URL = 'http://localhost';
+
+  constructor(private http:HttpClient) { }
+
+  insertStudent(obj:any) {
+    return this.http.post(this.ROOT_URL+'/API/crudStudent/insertStudent.php',obj);
+  }
+
 }
