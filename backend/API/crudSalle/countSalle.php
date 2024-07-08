@@ -2,16 +2,16 @@
 
 require_once '../../connect/db_connect.php';
 
-$req = 'SELECT count(*) FROM CLASSROOM';
+$req = 'SELECT count(*) AS classroom_count FROM CLASSROOM';
 $res = $conn->query($req);
 
 if ($res->num_rows > 0) {
-    $CLASSROOM = array();
+    
     while ($row = $res->fetch_assoc()) {
-        $CLASSROOM[] = $row;
+        $numberClassroom = $row['classroom_count'];
     }
     http_response_code(200);
-    echo json_encode($CLASSROOM);
+    echo json_encode(array('classroom_count'=>$numberClassroom));
 }
 
 $conn->close();
