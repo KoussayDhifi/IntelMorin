@@ -24,7 +24,7 @@ $key = "+1qDokz~!VE7*{o";
 $exp_time = time() + (60 * 60); 
 
 $user = array(
-    "email"=>$email,
+    "email"=>$email,    
     "password"=>$password
 );
   
