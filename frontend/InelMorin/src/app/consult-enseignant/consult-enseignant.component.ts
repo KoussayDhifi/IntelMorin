@@ -12,7 +12,8 @@ export class ConsultEnseignantComponent implements OnInit{
   public nomprenom = "";
   public idProf:any | undefined;
   public expand:boolean | undefined;
-  
+  public levels : any[] = [];
+  public subjects : any[] = [];
   public tutors:any[] = [];
   
   constructor (private fens:FetchEnseignantService) {

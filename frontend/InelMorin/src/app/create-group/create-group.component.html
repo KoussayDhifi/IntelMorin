@@ -5,28 +5,45 @@
     </div>
 
 <div class="container offset-3">
-    <form action="#" class="was-validated">
+    <form [formGroup]="createForm" class="was-validated ">
         {{msg}}
         <div class="row">
-            <div class="col-2 mt-2">
+            <div class="col">
                 <label for="idP" class="form-label">L'enseignant: </label>
-                
-                <select class="form-select" id="ProfE" aria-label="Prof" formControlName="Prof" (change)="setidTut($event.target)">
+                <select class="form-select w-50" id="ProfE" aria-label="Prof" formControlName="tutor" (change)="setidTut($event.target)" [(ngModel)]="tutor"> <!--normalement aamlt haka bich mbaaed ma yselectionni nekdhouh w nhotouh maa query bkolha-->
                     <option disabled selected>Open </option>
                     <option *ngFor="let tutor of tutors[0]" [value]="tutor.ID_TUTOR">{{tutor.F_NAMET}} {{tutor.L_NAMET}}</option>
                   </select>
             </div>
-            <div class="col-5 mt-2">
-                <label for="NomG" class="form-label">Nom du groupe: </label>
-                <input type="text" class="form-control" name="nomGroupe" [(ngModel)]="nomGroup"> 
+        </div>
+        <div class="row">
+            <div class="col mt-3">
+                <label for="subj">Matiere :</label>
+                <select id="subj" class="form-select w-50" formControlName="subject">
+                    <option selected>Choisir la matiere</option>
+                    <option *ngFor="let subject of subjects" [value]=""></option>
+                  </select>
             </div>
         </div>
         <div class="row">
-            <div class="col mt-3 offset-3 ">
-                <button type="submit" class="btn btn-primary  d-grid" (click)="createGroup()">Ajouter</button>
+            <div class="col mt-3">
+                <label for="lev">Niveau :</label>
+                <select id="lev" class="form-select w-50" formGroupName="level">
+                    <option selected>Choisir le niveau</option>
+                    <option *ngFor="let level of levels" [value]=""></option>
+                  </select>
             </div>
         </div>
-        
-        
+        <div class="row">
+            <div class="col mt-3">
+                <label for="NomG" class="form-label">Nom du groupe: </label>
+                <input type="text" class="form-control w-50" name="nomGroupe" formControlName="nomGroup"> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-3 ">
+                <button type="submit" class="btn btn-primary w-50 d-grid" (click)="createGroup()">Créer</button>
+            </div>
+        </div>
     </form>
 </div>

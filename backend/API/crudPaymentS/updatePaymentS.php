@@ -15,7 +15,7 @@ $month = $data['month'];
     $req = "UPDATE PaymentS ps
             JOIN studenttutor st ON ps.IDSTUDT = st.IDSTUDT
             SET ps.payedS = 1
-            WHERE st.STUDI = '$tutor_id' AND st.TUTI = '$student_id' AND ps.YearS = YEAR(CURDATE()) AND MONTHS = '$month'";
+            WHERE st.TUTI = '$tutor_id' AND st.STUDI = '$student_id' AND ps.YearS = YEAR(CURDATE()) AND MONTHS = '$month'";
 
     // Prepare and execute the statement
     $stmt = $conn->prepare($req);

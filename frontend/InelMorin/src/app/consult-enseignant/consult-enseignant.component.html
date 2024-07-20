@@ -6,17 +6,26 @@
 
 
 <div class="content mt-4">
-    <form action="#" class="d-flex align-items-center w-50 justify-content-center offset-4">
-        <div>
-            <input type="text" name='nom' id="nom" [(ngModel)]="nomprenom" class="form-control w-100 mr-5" placeholder="Nom du l'enseignant" style="font-family: Poppins;">     
+    <form class="row g-3 align-items-center">
+        <div class="col-auto">
+          <input type="text" class="form-control" placeholder="Nom d'Enseignant">
         </div>
-        
-            <div class="input-group ">
-                <input type="submit" class="btn btn-success input-group-text" value="Rechercher" style="font-family: Poppins;" (click)="affByName()">
-            </div>
-    </form>
-
-
+        <div class="col-auto">
+          <select class="form-select">
+            <option selected>Choisir le niveau</option>
+            <option *ngFor="let level of levels" [value]="level.IDLEVEL">{{level.LABEL_LEVEL}}</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <select class="form-select">
+            <option selected>Choose la matiere</option>
+            <option *ngFor="let subject of subjects" [value]="subject.IDSUBJ">{{subject.LABELSUBJ}}</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
     <div *ngFor="let tutor of tutors">
         <app-tutor-slot [ngClass]="{'expandMenu':expand,wrapMenu:!expand && expand !== undefined}" (prof)="editProf($event)" (data)="getData($event)" [callbackAff]="affTutor" [nom]="tutor.F_NAMET" [prenom]="tutor.L_NAMET" [idProf]="tutor.ID_TUTOR" [lycee]="tutor.SCHOOL" [mat]="tutor.LABELSUBJ" [tel]="tutor.TEL" [idmat]="tutor.SUBJ"></app-tutor-slot>
     </div>

@@ -3,17 +3,21 @@
     <h1 style="font-family: Poppins;">Consulter Eleves</h1>
 </div>
 
-<div class="content mt-4">
-    <form action="#" class="d-flex align-items-center w-50 justify-content-center offset-4">
-        <div>
-            <input type="text" name='nom' id="nom"  class="form-control w-100 mr-5" placeholder="Nom du l'élève" style="font-family: Poppins;">     
-        </div>
-        
-            <div class="input-group ">
-                <input type="submit" class="btn btn-success input-group-text" value="Rechercher" >
-            </div>
+<div class="content mt-5">
+    <form class="d-flex align-items-center w-50 justify-content-center">
+      <div class="col-auto">
+        <input type="text" class="form-control" placeholder="nom d'eleve" [(ngModel)]="Nomprenom">
+      </div>
+      <div class="col-auto">
+        <select class="form-select w-100">
+          <option selected>Choisir un niveau</option>
+          <option *ngFor="let level of levelArray" [value]="level.IDLEVEL">{{level.LABEL_LEVEL}}</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
     </form>
 
-
-   <app-eleves-slot></app-eleves-slot>
-</div>
+    <app-eleves-slot></app-eleves-slot>
+  </div>

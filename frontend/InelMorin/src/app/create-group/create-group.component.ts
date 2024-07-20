@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FetchEnseignantService } from '../create-enseignant/fetch-enseignant.service';
 import { FetchGroupService } from './fetch-group.service';
-import { group } from '@angular/animations';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-group',
@@ -9,13 +9,25 @@ import { group } from '@angular/animations';
   styleUrl: './create-group.component.css'
 })
 export class CreateGroupComponent {
-
+  createForm : FormGroup;
+  public levels =[];
+  public subjects = [];
   public tutors = [];
   public msg = '';
   public id_tut:string = '';
   public nomGroup = '';
+  public level : string = '';
+  public subject : string = '';
+  public tutor : string ='';  
   
-  constructor (private fens:FetchEnseignantService, private fgroup: FetchGroupService) {}
+  constructor (private fens:FetchEnseignantService, private fgroup: FetchGroupService,private fb :FormBuilder) {
+    this.createForm = this.fb.group({
+      tutor:'',
+      subject:'',
+      level:'',
+      nomGroup:''
+    });
+  }
 
   ngOnInit () {
     this.getTutors();
@@ -39,8 +51,10 @@ export class CreateGroupComponent {
 
   createGroup () {
     let obj = {
-      id_tut:this.id_tut,
-      group:this.nomGroup
+      id_tut:this.createForm.value.tutor,
+      subject:this.createForm.value.subject,
+      level:this.createForm.value.level,
+      nomGroup:this.createForm.value.nomGroup
     }
     console.log(obj);
 
