@@ -15,11 +15,14 @@ if ($email != '' && $password != '') {
 
 $query = "SELECT * FROM ADMIN WHERE EMAILADMIN='$email' and PASSADMIN='$password';";
 $res =$conn->query($query);
+if ($res) {
+    if ($res->num_rows>0) {
 
-if ($res->num_rows>0) {
 
+    $key = "+1qDokz~!VE7*{o";
 
-$key = "+1qDokz~!VE7*{o";
+    $exp_time = time() + (60 * 60); 
+
 
 $exp_time = time() + (60 * 60); 
 
@@ -34,19 +37,29 @@ $token = array(
         "iat" => time(),
         "exp" => $exp_time,
         "data" => $user
+
     );
     
-    
-$jwt = JWT::encode($token, $key,'HS256');
-    
-http_response_code(200);
-echo json_encode(array("token" => $jwt));
+    $token = array(
+            "iss" => "http://localhost:4200",
+            "aud" => "http://localhost:4200",
+            "iat" => time(),
+            "exp" => $exp_time,
+            "data" => $user
+        );
+        
+        
+    $jwt = JWT::encode($token, $key,'HS256');
+        
+    http_response_code(200);
+    echo json_encode(array("token" => $jwt));
 
-}else {
-    http_response_code(200);
-    echo json_encode(array("msg"=>"Email or password is wrong"));
-}
-}else {
-    http_response_code(200);
-    echo json_encode(array("msg"=>"Email or password is wrong"));
+    }else {
+        http_response_code(200);
+        echo json_encode(array("msg"=>"Email or password is wrong"));
+    }
+    }else {
+        http_response_code(200);
+        echo json_encode(array("msg"=>"Email or password is wrong"));
+    }
 }
