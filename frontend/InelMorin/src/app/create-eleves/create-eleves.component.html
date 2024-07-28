@@ -51,25 +51,46 @@
                       <input type="tel" class="form-control" pattern="[0-9]{2}[0-9]{3}[0-9]{3}" name="TelephoneParent" placeholder="Numéro de téléphone">
                   </div>
               </div>
-
+              <!--Niveau-->
+              <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="TelephoneParent">Niveau scolaire:</label>
+                </div>
+                <div class="col-md-8">
+                    <select name="level" id="level" class="form-select">
+                        <option value="niv_1">1er annee</option>
+                        <option value="niv_2">2eme annee</option>
+                        <option value="niv_3">3eme annee</option>
+                        <option value="niv_4    ">4eme annee</option>
+                    </select>
+                </div>
+            </div>
               
               <div formArrayName="studentList">
                   <div *ngFor="let student of studentListArray().controls; let i = index" [formGroupName]="i">
                       <div class="row mb-3">
+                        <!--subject-->
+                        <div class="col">
+                            <label for="Groupes">Matières :</label>
+                            <select class="form-select" id="subject" aria-label="subject" formControlName="subject">
+                                <option selected>Open</option>
+                                <option *ngFor="let mat of matieres" [value]="mat.ID_SUBJ">{{mat.LABElSUBJ}}</option>
+                            </select>
+                        </div>
                           <!-- Groupes -->
                           <div class="col">
-                              <label for="Groupes">Groupes</label>
-                              <select class="form-select" id="Groupes" aria-label="Groupes" formControlName="Groupes">
+                              <label for="Groupes">Enseignants</label>
+                              <select class="form-select" id="ProfE" aria-label="Prof" formControlName="Prof">
                                   <option selected>Open</option>
-                                  <option *ngFor="let group of groups" [value]="group.ID_GROUP">{{group.labelgroupe}}</option>
+                                  <option *ngFor="let tutor of tutors[0]" [value]="tutor.ID_TUTOR">{{tutor.F_NAMET}} {{tutor    .L_NAMET}}</option>
                               </select>
                           </div>
                           <!-- Prof -->
                           <div class="col">
-                              <label for="ProfE">Prof</label>
-                              <select class="form-select" id="ProfE" aria-label="Prof" formControlName="Prof">
+                              <label for="ProfE">Groupes</label>
+                              <select class="form-select" id="Groupes" aria-label="Groupes" formControlName="Groupes">
                                   <option disabled selected>Open</option>
-                                  <option *ngFor="let tutor of tutors[0]" [value]="tutor.ID_TUTOR">{{tutor.F_NAMET}} {{tutor    .L_NAMET}}</option>
+                                  <option *ngFor="let group of groups" [value]="group.ID_GROUP">{{group.labelgroupe}}</option>
                               </select>
                           </div>
                           <!-- Mois -->

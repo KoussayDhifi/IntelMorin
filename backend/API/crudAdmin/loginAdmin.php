@@ -23,9 +23,21 @@ if ($res) {
 
     $exp_time = time() + (60 * 60); 
 
-    $user = array(
-        "email"=>$email,
-        "password"=>$password
+
+$exp_time = time() + (60 * 60); 
+
+$user = array(
+    "email"=>$email,    
+    "password"=>$password
+);
+  
+$token = array(
+        "iss" => "http://localhost:4200",
+        "aud" => "http://localhost:4200",
+        "iat" => time(),
+        "exp" => $exp_time,
+        "data" => $user
+
     );
     
     $token = array(

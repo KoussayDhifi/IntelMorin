@@ -15,12 +15,12 @@ export class CreateElevesComponent implements OnInit {
   public DateNE: any = '';
   public TelephoneE: any = '';
   public TelephoneP: any = '';
-
+  public level : any = '';
 
   studentForm: FormGroup = new FormGroup({
     studentList: new FormArray([])
   });
-
+  matieres:any[] =[]
   tutors:any[] = []
   groups:any[] = []
   
@@ -83,6 +83,7 @@ export class CreateElevesComponent implements OnInit {
       date:this.DateNE,
       tel:this.TelephoneE,
       telp:this.TelephoneP, 
+      level:this.level,
       tutors:this.studentListArray
 
     }

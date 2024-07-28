@@ -1,13 +1,26 @@
 import { Component, inject } from '@angular/core';
 import { FetchMatiereService } from '../matieres/fetch-matiere.service';
 import { FetchEnseignantService } from './fetch-enseignant.service';
-
+import { CommonModule } from '@angular/common';
+import { AbstractControl, Form, FormArray, FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-create-enseignant',
   templateUrl: './create-enseignant.component.html',
-  styleUrl: './create-enseignant.component.css'
+  styleUrl: './create-enseignant.component.css',
 })
 export class CreateEnseignantComponent {
+  
+  constructor(private builder : FormBuilder){}
+
+  ngOnInit() {
+   this.affMat();
+   this.LevelData = this.builder.group({
+     level_id : this.builder.array([this.builder.control(null)])
+   })
+  }
+
+
+  LevelData! : FormGroup;
   public msg = '';
   nom: string = '' ; 
   prenom : string ='' ; 
@@ -17,12 +30,13 @@ export class CreateEnseignantComponent {
   Password : any ='' ; 
   NomLy : string ='' ; 
   Matiere : string ='' ; 
+  level : string ='';
   Matierefetcher = inject(FetchMatiereService);
   Enseignantfetcher = inject(FetchEnseignantService);
 
 
 
-
+  public levels : any[] = [];
   public matieres:any[] = [];
 
   affMat() {
@@ -58,16 +72,12 @@ export class CreateEnseignantComponent {
       }
 
     )
-
    }
-
+   addLevel()
+   {(this.LevelData.get('level_id') as FormArray).push(this.builder.control(null))}
+   deleteLevel(index: any)
+   {(this.LevelData.get('level_id') as FormArray).removeAt(index)}
+   getLevels() : AbstractControl[]
+   {return (<FormArray> this.LevelData.get('level_id')).controls}
    
-
-
-   ngOnInit() {
-    this.affMat();
-   }
-  
-
-
 }
